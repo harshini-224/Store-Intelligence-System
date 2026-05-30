@@ -13,13 +13,13 @@ Deliverables:
 
 ## Phase 2 — Video Metadata Extraction
 
-Status: In Progress
+Status: Completed
 
-Goal:
-Extract technical properties of all videos.
+Deliverables:
+- FPS extraction
+- Frame count extraction
+- Duration calculation
+- Resolution extraction
 
-Output:
-- FPS
-- Resolution
-- Duration
-- Frame Count
+Output Artifact:
+outputs/metadata/video_metadata.json
