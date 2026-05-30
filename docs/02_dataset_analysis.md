@@ -141,19 +141,34 @@ Observations:
 
 ---
 
-# Dataset Readiness Assessment
+# Dataset Feasibility Assessment
 
-Detection Feasibility:
-Pending
+## Strongly Supported Features
 
-Tracking Feasibility:
-Pending
+- Visitor Detection
+- Visitor Tracking
+- Entry Detection
+- Exit Detection
+- Zone Analytics
+- Dwell Time Analytics
+- Heatmap Generation
 
-ReID Feasibility:
-Pending
+## Partially Supported Features
 
-Zone Analytics Feasibility:
-Pending
+- Queue Analytics
 
-Queue Analytics Feasibility:
-Pending
+## Unsupported / Low Confidence Features
+
+- Staff Identification
+- Reliable Cross-Camera Re-Identification
+
+## Recommended MVP Scope
+
+Video
+→ Detection
+→ Tracking
+→ Entry/Exit Events
+→ Zone Events
+→ Analytics API
+→ Dashboard
+
