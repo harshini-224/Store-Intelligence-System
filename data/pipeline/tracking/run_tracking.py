@@ -9,8 +9,8 @@ from tracker import VisitorTracker
 # =====================================================
 
 #INPUT_VIDEO = "data/raw/entrance.mp4"
-#INPUT_VIDEO = "data/raw/floor_a.mp4"
-INPUT_VIDEO = "data/raw/floor_b.mp4"
+INPUT_VIDEO = "data/raw/floor_a.mp4"
+#INPUT_VIDEO = "data/raw/floor_b.mp4"
 # INPUT_VIDEO = "data/raw/billing.mp4"
 
 # =====================================================
@@ -62,6 +62,9 @@ def main():
 
     width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
     height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+
+    print(f"Width = {width}")
+    print(f"Height = {height}")
 
     total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
 

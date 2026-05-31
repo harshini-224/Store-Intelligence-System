@@ -35,17 +35,25 @@ class VisitorTracker:
 
             x1, y1, x2, y2 = box.xyxy[0].tolist()
 
+            center_x = int((x1 + x2) / 2)
+            center_y = int((y1 + y2) / 2)
+
             tracks.append(
                 {
                     "track_id": int(track_id),
+
                     "bbox": [
                         int(x1),
                         int(y1),
                         int(x2),
                         int(y2)
                     ],
+
+                    "center_x": center_x,
+                    "center_y": center_y,
+
                     "confidence": float(box.conf[0])
                 }
-            )
+            )           
 
         return tracks
