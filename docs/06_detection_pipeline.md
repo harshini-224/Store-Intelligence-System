@@ -38,3 +38,36 @@ Example:
 - Detect visible customers
 - Maintain real-time feasibility
 - Minimize false positives
+
+# Detection Validation
+
+## Entrance Camera
+
+Result:
+PASS
+
+Observations:
+- Person detection successful
+- Entry region clearly visible
+- Low false positives
+
+---
+
+## Store Floor Camera
+
+Result:
+PASS
+
+Observations:
+- Multiple visitors detected
+- Crowding handled reasonably well
+
+---
+
+## Billing Camera
+
+Result:
+NOT TESTED
+
+Reason:
+Will be validated during queue analytics implementation.

@@ -1,0 +1,37 @@
+[
+    {
+        "video_name": "billing.mp4",
+        "fps": 24.98,
+        "frame_count": 3465,
+        "duration_seconds": 138.7,
+        "resolution": "1920x1080"
+    },
+    {
+        "video_name": "corner.mp4",
+        "fps": 24.98,
+        "frame_count": 3647,
+        "duration_seconds": 145.99,
+        "resolution": "1920x1080"
+    },
+    {
+        "video_name": "entrance.mp4",
+        "fps": 29.97,
+        "frame_count": 4436,
+        "duration_seconds": 148.01,
+        "resolution": "1920x1080"
+    },
+    {
+        "video_name": "floor_a.mp4",
+        "fps": 29.97,
+        "frame_count": 4193,
+        "duration_seconds": 139.91,
+        "resolution": "1920x1080"
+    },
+    {
+        "video_name": "floor_b.mp4",
+        "fps": 29.97,
+        "frame_count": 3774,
+        "duration_seconds": 125.93,
+        "resolution": "1920x1080"
+    }
+]

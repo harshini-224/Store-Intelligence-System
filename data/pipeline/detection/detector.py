@@ -10,7 +10,10 @@ class PersonDetector:
         self.model = YOLO(model_name)
 
     def detect(self, frame):
-        results = self.model(frame)
+        results = self.model(
+            frame,
+            verbose=False  # suppress per-frame YOLO logs
+        )
 
         detections = []
 
@@ -25,18 +28,14 @@ class PersonDetector:
 
                 x1, y1, x2, y2 = box.xyxy[0].tolist()
 
-                confidence = float(box.conf[0])
-
-                detections.append(
-                    {
-                        "bbox": [
-                            int(x1),
-                            int(y1),
-                            int(x2),
-                            int(y2)
-                        ],
-                        "confidence": confidence
-                    }
-                )
+                detections.append({
+                    "bbox": [
+                        int(x1),
+                        int(y1),
+                        int(x2),
+                        int(y2)
+                    ],
+                    "confidence": float(box.conf[0])
+                })
 
         return detections
