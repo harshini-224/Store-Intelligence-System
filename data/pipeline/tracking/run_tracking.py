@@ -1,8 +1,10 @@
 from pathlib import Path
 import cv2
-
+import json
 from tracker import VisitorTracker
 
+frame_number = 0
+tracking_records = []
 
 # =====================================================
 # SELECT VIDEO HERE
@@ -141,6 +143,18 @@ def main():
             x1, y1, x2, y2 = track["bbox"]
             track_id = track["track_id"]
 
+            center_x = int((x1 + x2) / 2)
+            center_y = int((y1 + y2) / 2)
+
+            tracking_records.append(
+                {
+                    "frame": frame_number,
+                    "track_id": track_id,
+                    "center_x": center_x,
+                    "center_y": center_y
+                }
+            )
+
             cv2.rectangle(
                 frame,
                 (x1, y1),
@@ -178,6 +192,26 @@ def main():
 
     cap.release()
     writer.release()
+
+    tracks_file = (
+            f"data/outputs/tracking/{video_name}_tracks.json"
+        )
+
+    with open(
+            tracks_file,
+            "w"
+        ) as file:
+
+            json.dump(
+                tracking_records,
+                file,
+                indent=4
+            )
+
+    
+    print(
+            f"Tracking data saved to {tracks_file}"
+        )
 
     print("\nTracking Completed")
     print(f"Output: {output_video}")

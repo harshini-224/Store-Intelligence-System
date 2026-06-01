@@ -3,12 +3,27 @@ from pathlib import Path
 
 from dwell_time import DwellTimeTracker
 from zone_manager import ZoneManager
-from zone_config import FLOOR_A_ZONES
+from zone_config import FLOOR_B_ZONES
+
+from analytics_report import AnalyticsReport
+from export_csv import export_dwell_csv
 
 
-OUTPUT_FILE = (
-    "data/outputs/analytics/analytics_summary.json"
+VIDEO_NAME = "floor_b"
+
+TRACKS_FILE = (
+    f"data/outputs/tracking/{VIDEO_NAME}_tracks.json"
 )
+
+SUMMARY_FILE = (
+    f"data/outputs/analytics/{VIDEO_NAME}_summary.json"
+)
+
+DWELL_CSV_FILE = (
+    f"data/outputs/analytics/{VIDEO_NAME}_dwell.csv"
+)
+
+FPS = 30
 
 
 def main():
@@ -21,29 +36,21 @@ def main():
     )
 
     zone_manager = ZoneManager(
-        FLOOR_A_ZONES
+        FLOOR_B_ZONES
     )
 
-    dwell_tracker = DwellTimeTracker()
+    dwell_tracker = DwellTimeTracker(
+        FPS
+    )
 
-    #
-    # DEMO DATA
-    #
+    with open(
+        TRACKS_FILE,
+        "r"
+    ) as file:
 
-    sample_tracks = [
-        {
-            "track_id": 1,
-            "center_x": 100,
-            "center_y": 200
-        },
-        {
-            "track_id": 2,
-            "center_x": 300,
-            "center_y": 400
-        }
-    ]
+        tracks = json.load(file)
 
-    for track in sample_tracks:
+    for track in tracks:
 
         zone = zone_manager.get_zone(
             track["center_x"],
@@ -55,21 +62,28 @@ def main():
             zone
         )
 
-    results = dwell_tracker.get_results()
+    dwell_results = (
+        dwell_tracker.get_results()
+    )
 
-    with open(
-        OUTPUT_FILE,
-        "w"
-    ) as file:
+    export_dwell_csv(
+        dwell_results,
+        DWELL_CSV_FILE
+    )
 
-        json.dump(
-            results,
-            file,
-            indent=4
-        )
+    report = AnalyticsReport()
+
+    report.generate(
+        dwell_results,
+        SUMMARY_FILE
+    )
 
     print(
-        f"Analytics saved to {OUTPUT_FILE}"
+        f"Summary saved to {SUMMARY_FILE}"
+    )
+
+    print(
+        f"Dwell CSV saved to {DWELL_CSV_FILE}"
     )
 
 

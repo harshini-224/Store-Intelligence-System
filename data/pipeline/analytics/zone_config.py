@@ -6,7 +6,7 @@ FLOOR_A_ZONES = {
         "y2": 500
     },
     "PREMIUM_SKINCARE": {
-        "x1": 0,
+        "x1": 900,
         "y1": 0,
         "x2": 1920,
         "y2": 500
