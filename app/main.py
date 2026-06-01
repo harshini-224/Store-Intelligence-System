@@ -6,6 +6,9 @@ from app.metrics import router as metrics_router
 from app.funnel import router as funnel_router
 from app.anomalies import router as anomalies_router
 from app.insights import router as insights_router
+from app.heatmap import router as heatmap_router
+from app.recommendation import router as recommendations_router
+from app.kpis import router as kpis_router
 
 app = FastAPI(
     title="Store Intelligence API"
@@ -32,3 +35,6 @@ app.include_router(
 )
 
 app.include_router(insights_router)
+app.include_router(heatmap_router)
+app.include_router(recommendations_router)
+app.include_router(kpis_router)
