@@ -1,33 +1,102 @@
 # pipeline/events/event_generator.py
 
-import json
 import csv
+import json
+import uuid
+from datetime import datetime, timedelta
 from pathlib import Path
+from typing import Any, Dict, Optional
 
 
 class EventGenerator:
 
-    def __init__(self):
+    def __init__(
+        self,
+        store_id: str = "STORE_001",
+        camera_id: str = "CAM_UNKNOWN",
+        fps: int = 30,
+        video_start_time: Optional[datetime] = None
+    ):
 
         self.events = []
+        self.store_id = store_id
+        self.camera_id = camera_id
+        self.fps = fps
+        self.video_start_time = video_start_time
 
         self.output_dir = Path("data/outputs/events")
         self.output_dir.mkdir(parents=True, exist_ok=True)
 
-    def add_event(self, visitor_id, event_type, frame_no):
+    def frame_to_timestamp(self, frame_no: int) -> str:
+        if self.video_start_time:
+            timestamp = self.video_start_time + timedelta(
+                seconds=frame_no / self.fps
+            )
+            iso = timestamp.isoformat()
+            if iso.endswith("+00:00"):
+                return iso[:-6] + "Z"
+            return iso
 
-        event = {
+        return f"frame:{frame_no}"
+
+    def create_event(
+        self,
+        visitor_id: int,
+        event_type: str,
+        frame_no: int,
+        zone_id: Optional[str] = None,
+        confidence: float = 1.0,
+        metadata: Optional[Dict[str, Any]] = None,
+        camera_id: Optional[str] = None,
+        store_id: Optional[str] = None
+    ) -> Dict[str, Any]:
+
+        metadata = metadata or {}
+        metadata.setdefault("frame", frame_no)
+
+        return {
+            "event_id": uuid.uuid4().hex,
             "visitor_id": visitor_id,
-            "event": event_type,
-            "frame": frame_no
+            "store_id": store_id or self.store_id,
+            "camera_id": camera_id or self.camera_id,
+            "timestamp": self.frame_to_timestamp(frame_no),
+            "event_type": event_type,
+            "zone_id": zone_id,
+            "confidence": confidence,
+            "metadata": metadata,
+            "event": event_type
         }
+
+    def add_event(
+        self,
+        visitor_id: int,
+        event_type: str,
+        frame_no: int,
+        zone_id: Optional[str] = None,
+        confidence: float = 1.0,
+        metadata: Optional[Dict[str, Any]] = None,
+        camera_id: Optional[str] = None,
+        store_id: Optional[str] = None
+    ):
+
+        event = self.create_event(
+            visitor_id=visitor_id,
+            event_type=event_type,
+            frame_no=frame_no,
+            zone_id=zone_id,
+            confidence=confidence,
+            metadata=metadata,
+            camera_id=camera_id,
+            store_id=store_id
+        )
 
         self.events.append(event)
 
         print(
             f"[EVENT] {event_type} | "
             f"{visitor_id} | "
-            f"Frame {frame_no}"
+            f"zone={zone_id} | "
+            f"frame={frame_no}"
         )
 
     def save_json(self):
@@ -46,16 +115,25 @@ class EventGenerator:
             writer = csv.DictWriter(
                 f,
                 fieldnames=[
+                    "event_id",
                     "visitor_id",
-                    "event",
-                    "frame"
+                    "store_id",
+                    "camera_id",
+                    "timestamp",
+                    "event_type",
+                    "zone_id",
+                    "confidence",
+                    "metadata",
+                    "event"
                 ]
             )
 
             writer.writeheader()
 
             for event in self.events:
-                writer.writerow(event)
+                row = event.copy()
+                row["metadata"] = json.dumps(row["metadata"])
+                writer.writerow(row)
 
     def save_all(self):
 

@@ -1,6 +1,7 @@
 from fastapi import APIRouter
 import json
 from pathlib import Path
+from app.analytics_utils import iter_zone_metrics
 
 router = APIRouter()
 
@@ -35,10 +36,13 @@ def get_insights():
     # FLOOR A
     # =====================================
 
-    if floor_a:
+    floor_a_zones = list(iter_zone_metrics(floor_a))
+    floor_b_zones = list(iter_zone_metrics(floor_b))
+
+    if floor_a_zones:
 
         top_zone = max(
-            floor_a.items(),
+            floor_a_zones,
             key=lambda x: x[1]["total_dwell_time"]
         )
 
@@ -58,10 +62,10 @@ def get_insights():
     # FLOOR B
     # =====================================
 
-    if floor_b:
+    if floor_b_zones:
 
         top_zone = max(
-            floor_b.items(),
+            floor_b_zones,
             key=lambda x: x[1]["total_dwell_time"]
         )
 
@@ -83,7 +87,7 @@ def get_insights():
 
     all_zones = []
 
-    for zone, data in floor_a.items():
+    for zone, data in floor_a_zones:
 
         all_zones.append(
             (
@@ -92,7 +96,7 @@ def get_insights():
             )
         )
 
-    for zone, data in floor_b.items():
+    for zone, data in floor_b_zones:
 
         all_zones.append(
             (

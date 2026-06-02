@@ -9,6 +9,7 @@ from app.insights import router as insights_router
 from app.heatmap import router as heatmap_router
 from app.recommendation import router as recommendations_router
 from app.kpis import router as kpis_router
+from app.ai_insights import router as ai_router
 
 app = FastAPI(
     title="Store Intelligence API"
@@ -38,3 +39,6 @@ app.include_router(insights_router)
 app.include_router(heatmap_router)
 app.include_router(recommendations_router)
 app.include_router(kpis_router)
+app.include_router(
+    ai_router
+)

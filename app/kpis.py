@@ -1,6 +1,7 @@
 import json
 
 from fastapi import APIRouter
+from app.analytics_utils import iter_zone_metrics
 
 router = APIRouter()
 
@@ -20,7 +21,7 @@ def kpis():
     top_zone = None
     best_time = 0
 
-    for zone, data in analytics.items():
+    for zone, data in iter_zone_metrics(analytics):
 
         total_visitors += data["visitors"]
         total_dwell += data["total_dwell_time"]

@@ -1,431 +1,233 @@
 # Store Intelligence System
 
-## Overview
+Store Intelligence System is an end-to-end retail analytics platform that turns CCTV footage into visitor behavior metrics, operational signals, recommendations, and dashboard views.
 
-Store Intelligence System is an end-to-end retail analytics platform that transforms raw CCTV footage into actionable business insights.
+The system processes store videos through detection, tracking, event generation, analytics, API serving, and dashboard visualization. Its goal is to give physical retail teams visibility similar to what e-commerce teams already have: traffic, engagement, conversion, queue friction, and dropoff behavior.
 
-The system processes video streams from multiple store cameras, detects and tracks visitors, generates behavioral events, computes retail analytics, and exposes insights through APIs and dashboards.
+## Features
 
-The objective is to provide physical retail stores with analytics capabilities similar to those available in modern e-commerce platforms.
+- Person detection from retail CCTV footage.
+- Visitor tracking with persistent frame-level identities.
+- Canonical visitor IDs for reentry handling.
+- Structured event generation for entry, exit, zone movement, dwell, queue, and purchase behavior.
+- Zone dwell analytics and visitor counts.
+- Queue analytics including joins, abandonment, depth, and wait time.
+- Funnel analytics from entry to zone visit, queue, and purchase.
+- Conversion analytics by correlating billing-zone visits with POS transactions.
+- Staff exclusion for customer-only analytics.
+- Heatmap generation from movement tracks.
+- Recommendation, insight, anomaly, KPI, and health endpoints.
+- Streamlit dashboard for upload, pipeline execution, and review.
 
----
+## Architecture
 
-# Problem Statement
+```text
+Videos
+↓
+Detection
+↓
+Tracking
+↓
+Events
+↓
+Analytics
+↓
+API + Dashboard
+```
 
-Retail stores generally have access to:
+Main components:
 
-* Sales data
-* Billing records
-* Inventory information
+- Detection: YOLO-based person detection in `data/pipeline/detection`.
+- Tracking: visitor identity tracking in `data/pipeline/tracking`.
+- Events: business event generation in `data/pipeline/events`.
+- Analytics: dwell, queue, funnel, conversion, heatmap, and recommendations in `data/pipeline/analytics`, `data/pipeline/conversion`, `data/pipeline/heatmaps`, and `data/pipeline/insights`.
+- API: FastAPI app in `app`.
+- Dashboard: Streamlit app in `dashboard/streamlit_app.py`.
 
-However, they lack visibility into customer behavior.
+See [ARCHITECTURE.md](ARCHITECTURE.md), [DESIGN.md](DESIGN.md), and [PIPELINE_FLOW.md](PIPELINE_FLOW.md) for reviewer-level details.
 
-Store managers cannot easily answer:
+## Quick Start
 
-* How many visitors entered the store?
-* How many visitors completed a purchase?
-* Which store sections attract the most attention?
-* Where do customers drop off before purchasing?
-* Are queues affecting conversion rates?
-* Are there operational anomalies occurring in real time?
+Install dependencies:
 
-This project addresses these challenges by converting CCTV footage into structured business intelligence.
+```bash
+pip install -r requirements.txt
+```
 
----
+Run the API:
 
-# Business Objectives
+```bash
+uvicorn app.main:app --reload
+```
 
-## Primary Objective
+Run the dashboard:
 
-Measure and improve offline store conversion rate.
+```bash
+streamlit run dashboard/streamlit_app.py
+```
 
-### Conversion Rate
+Run a floor video through the core pipeline:
 
-Purchasing Visitors / Total Visitors
+```bash
+python data/pipeline/detection/run_detection.py --input-video data/raw/floor_a.mp4 --video-name floor_a
+python data/pipeline/tracking/run_tracking.py --input-video data/raw/floor_a.mp4 --video-name floor_a --output-dir data/outputs/tracking
+python data/pipeline/events/run_events.py --video-name floor_a --track-file data/outputs/tracking/floor_a_tracks.json
+python data/pipeline/analytics/run_zone_analytics.py --video-name floor_a --tracks-file data/outputs/tracking/floor_a_tracks.json
+python data/pipeline/heatmaps/run_heatmap.py --input-video data/raw/floor_a.mp4 --video-name floor_a --tracks-file data/outputs/tracking/floor_a_tracks.json
+```
 
----
+## API Examples
 
-## Secondary Objectives
+Health:
 
-* Visitor counting
-* Entry and exit tracking
-* Zone analytics
-* Queue monitoring
-* Dwell time analysis
-* Funnel analysis
-* Anomaly detection
+```bash
+curl http://127.0.0.1:8000/health
+```
 
----
-
-# Input Data
-
-The current dataset consists of five CCTV video feeds captured from different areas of a retail store.
-
-## Available Camera Views
-
-### Camera 1: Main Entrance
-
-Purpose:
-
-* Visitor entry detection
-* Visitor exit detection
-* Traffic analysis
-
-Expected Events:
-
-* ENTRY
-* EXIT
-* REENTRY
-
----
-
-### Camera 2: Billing Counter
-
-Purpose:
-
-* Queue monitoring
-* Billing activity observation
-
-Expected Events:
-
-* BILLING_QUEUE_JOIN
-* BILLING_QUEUE_ABANDON
-
----
-
-### Camera 3: Store Floor View A
-
-Purpose:
-
-* Customer movement tracking
-* Zone activity analysis
-
-Expected Events:
-
-* ZONE_ENTER
-* ZONE_EXIT
-* ZONE_DWELL
-
----
-
-### Camera 4: Store Floor View B
-
-Purpose:
-
-* Additional zone coverage
-* Cross-camera tracking support
-
-Expected Events:
-
-* ZONE_ENTER
-* ZONE_EXIT
-* ZONE_DWELL
-
----
-
-### Camera 5: Low-Traffic Store Area
-
-Purpose:
-
-* Dead-zone detection
-* Heatmap generation
-
-Expected Events:
-
-* ZONE_ENTER
-* ZONE_DWELL
-
----
-
-# Expected System Output
-
-The system produces structured visitor events.
-
-Example:
+Example response:
 
 ```json
 {
-  "visitor_id": "VIS_001",
-  "event_type": "ENTRY",
-  "timestamp": "2026-05-30T10:05:00Z",
-  "camera_id": "CAM_ENTRY"
+  "status": "healthy",
+  "event_count": 1234,
+  "last_event_timestamp": "2026-06-02T11:55:00Z",
+  "stale_feed": false,
+  "active_cameras": 5,
+  "analytics_available": true,
+  "tracking_available": true,
+  "events_available": true
 }
 ```
 
-These events are later transformed into business metrics.
+Metrics:
 
----
+```bash
+curl http://127.0.0.1:8000/metrics
+curl http://127.0.0.1:8000/metrics/conversion
+curl http://127.0.0.1:8000/metrics/conversion/summary
+curl http://127.0.0.1:8000/metrics/queue
+curl http://127.0.0.1:8000/metrics/queue/summary
+curl http://127.0.0.1:8000/funnel
+```
 
-# Functional Requirements
+Insights:
 
-## Visitor Detection
+```bash
+curl http://127.0.0.1:8000/kpis
+curl http://127.0.0.1:8000/insights
+curl http://127.0.0.1:8000/ai-insights
+curl http://127.0.0.1:8000/recommendations
+curl http://127.0.0.1:8000/anomalies
+```
 
-The system shall detect all visible customers from CCTV footage.
+Heatmaps:
 
----
+```bash
+curl http://127.0.0.1:8000/heatmap/floor-a
+curl http://127.0.0.1:8000/heatmap/floor-b
+```
 
-## Visitor Tracking
+## Analytics Examples
 
-The system shall maintain consistent identities across video frames.
+Sample event:
 
----
+```json
+{
+  "event_id": "9e1f23b95c9d44d2a2f4d7d95f870f3d",
+  "visitor_id": 3,
+  "store_id": "STORE_001",
+  "camera_id": "CAM_FLOOR_A",
+  "timestamp": "2026-06-02T10:15:20Z",
+  "event_type": "ZONE_ENTER",
+  "zone_id": "SKINCARE_BROWSING",
+  "confidence": 0.88,
+  "metadata": {
+    "source": "zone_transition",
+    "frame": 120,
+    "is_staff": false
+  },
+  "event": "ZONE_ENTER"
+}
+```
 
-## Re-Identification
+Sample analytics summary:
 
-The system shall recognize visitors who temporarily leave and reappear.
+```json
+{
+  "SKINCARE_BROWSING": {
+    "visitors": 24,
+    "total_dwell_time": 186.4
+  },
+  "_conversion_metrics": {
+    "total_visitors": 35,
+    "converted_visitors": 9,
+    "billing_zone_visitors": 13,
+    "conversion_rate": 25.71
+  },
+  "_queue_metrics": {
+    "queue_joins": 13,
+    "queue_abandons": 2,
+    "abandonment_rate_percent": 15.38
+  },
+  "_funnel_metrics": {
+    "entry": 35,
+    "zone_visit": 30,
+    "billing_queue": 13,
+    "purchase": 9
+  }
+}
+```
 
----
+## Project Structure
 
-## Event Generation
-
-The system shall generate business events including:
-
-* ENTRY
-* EXIT
-* REENTRY
-* ZONE_ENTER
-* ZONE_EXIT
-* ZONE_DWELL
-* BILLING_QUEUE_JOIN
-* BILLING_QUEUE_ABANDON
-
----
-
-## Analytics
-
-The system shall compute:
-
-* Visitor Count
-* Conversion Rate
-* Average Dwell Time
-* Queue Metrics
-* Heatmaps
-* Funnel Metrics
-
----
-
-## API Services
-
-The system shall expose analytics through REST endpoints.
-
-Examples:
-
-* /health
-* /metrics
-* /funnel
-* /heatmap
-* /anomalies
-
----
-
-# System Architecture
-
-Raw CCTV Footage
-↓
-Person Detection
-↓
-Multi-Object Tracking
-↓
-Visitor Re-Identification
-↓
-Event Generation
-↓
-Event Storage
-↓
-Metrics Engine
-↓
-REST API
-↓
-Dashboard
-
----
-
-# Technology Stack
-
-## Computer Vision
-
-* OpenCV
-* YOLO
-
-Purpose:
-Human detection and frame processing.
-
----
-
-## Tracking
-
-* ByteTrack
-
-Purpose:
-Maintain visitor identity across frames.
-
----
-
-## Re-Identification
-
-* TorchReID
-* OSNet
-
-Purpose:
-Detect returning visitors.
-
----
-
-## Backend
-
-* FastAPI
-
-Purpose:
-Expose analytics APIs.
-
----
-
-## Database
-
-* SQLite
-
-Purpose:
-Store events and metrics.
-
----
-
-## Dashboard
-
-* Streamlit
-
-Purpose:
-Real-time visualization.
-
----
-
-## Containerization
-
-* Docker
-* Docker Compose
-
-Purpose:
-Portable deployment.
-
----
-
-# Repository Structure
-
-store-intelligence-system/
-
-├── docs/
+```text
+Store-Intelligence-System/
+├── app/                         FastAPI routers and services
+├── dashboard/                   Streamlit dashboard
 ├── data/
-├── pipeline/
-├── app/
-├── dashboard/
-├── tests/
-├── outputs/
-├── docker-compose.yml
+│   ├── pipeline/
+│   │   ├── detection/           YOLO detection pipeline
+│   │   ├── tracking/            visitor tracking pipeline
+│   │   ├── events/              event generation
+│   │   ├── analytics/           zone, queue, and funnel analytics
+│   │   ├── conversion/          POS conversion correlation
+│   │   ├── heatmaps/            movement heatmap generation
+│   │   └── insights/            recommendations and ranking
+│   └── outputs/                 generated artifacts
+├── docs/                        supporting design notes
+├── ARCHITECTURE.md              architecture overview
+├── DESIGN.md                    design decisions and tradeoffs
+├── PIPELINE_FLOW.md             end-to-end pipeline walkthrough
+├── STAFF_EXCLUSION.md           staff exclusion audit
 ├── requirements.txt
 └── README.md
+```
 
----
+## Output Artifacts
 
-# Development Roadmap
+Common generated files:
 
-## Phase 1
+- `data/outputs/detection/*_detected.mp4`
+- `data/outputs/tracking/*_tracked.mp4`
+- `data/outputs/tracking/*_tracks.json`
+- `data/outputs/events/events.json`
+- `data/outputs/events/events.csv`
+- `data/outputs/analytics/*_summary.json`
+- `data/outputs/analytics/*_dwell.csv`
+- `data/outputs/heatmaps/*_heatmap.jpg`
 
-Dataset Analysis
+## Review Notes
 
-Deliverables:
+- The system is event-oriented: metrics are derived from track and event artifacts.
+- Staff visitors are excluded from customer analytics when marked with `is_staff: true`.
+- Conversion is correlation-based, using billing-zone visits and POS timestamps.
+- Health is operational: `/health` reports missing outputs, event count, latest event timestamp, staleness, and active cameras.
+- The current repository uses file artifacts for transparency and reviewability; production deployment can replace these reads with durable storage.
 
-* Camera understanding
-* Video metadata extraction
-* Zone identification
+## Additional Documentation
 
----
-
-## Phase 2
-
-Detection Pipeline
-
-Deliverables:
-
-* Human detection
-* Annotated videos
-
----
-
-## Phase 3
-
-Tracking Pipeline
-
-Deliverables:
-
-* Persistent track IDs
-* Visitor trajectories
-
----
-
-## Phase 4
-
-Event Generation
-
-Deliverables:
-
-* Entry events
-* Exit events
-* Zone events
-
----
-
-## Phase 5
-
-Event Storage
-
-Deliverables:
-
-* Database schema
-* Event persistence
-
----
-
-## Phase 6
-
-Analytics Engine
-
-Deliverables:
-
-* Visitor metrics
-* Conversion metrics
-* Funnel analytics
-
----
-
-## Phase 7
-
-API Layer
-
-Deliverables:
-
-* REST endpoints
-* Queryable analytics
-
----
-
-## Phase 8
-
-Dashboard
-
-Deliverables:
-
-* Real-time metrics
-* Operational monitoring
-
----
-
-# Success Criteria
-
-A successful system should answer:
-
-1. How many visitors entered the store?
-2. How many completed a purchase?
-3. Which zones received the highest engagement?
-4. Are queues affecting conversion?
-5. Are there operational anomalies requiring attention?
-
-The final outcome is a production-oriented retail intelligence platform built from raw CCTV footage.
+- [ARCHITECTURE.md](ARCHITECTURE.md): system components and operational layout.
+- [DESIGN.md](DESIGN.md): design choices, rationale, and tradeoffs.
+- [PIPELINE_FLOW.md](PIPELINE_FLOW.md): stage-by-stage flow with sample outputs.
+- [STAFF_EXCLUSION.md](STAFF_EXCLUSION.md): staff filtering audit.
+- [docs/10_conversion_analytics.md](docs/10_conversion_analytics.md): conversion implementation details.

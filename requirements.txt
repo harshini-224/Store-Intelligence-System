@@ -3,3 +3,8 @@ ultralytics
 fastapi
 uvicorn
 pydantic
+streamlit
+pandas==2.2.2
+plotly
+requests
+numpy==1.26.4

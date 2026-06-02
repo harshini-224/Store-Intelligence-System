@@ -1,5 +1,6 @@
 from fastapi import APIRouter
 import json
+from app.analytics_utils import iter_zone_metrics
 
 router = APIRouter()
 
@@ -22,10 +23,12 @@ def anomalies():
 
                 data = json.load(f)
 
-            for zone, values in data.items():
+            for zone, values in iter_zone_metrics(data):
 
                 visitors = values["visitors"]
                 dwell = values["total_dwell_time"]
+                if visitors == 0:
+                    continue
 
                 avg_dwell = dwell / visitors
 

@@ -1,24 +1,13 @@
-from pathlib import Path
-import cv2
+﻿from pathlib import Path
+import argparse
 import json
+import cv2
+
 from tracker import VisitorTracker
-
-frame_number = 0
-tracking_records = []
-
-# =====================================================
-# SELECT VIDEO HERE
-# =====================================================
-
-#INPUT_VIDEO = "data/raw/entrance.mp4"
-INPUT_VIDEO = "data/raw/floor_a.mp4"
-#INPUT_VIDEO = "data/raw/floor_b.mp4"
-# INPUT_VIDEO = "data/raw/billing.mp4"
 
 # =====================================================
 # CAMERA CONFIGURATION
 # =====================================================
-
 CAMERA_CONFIG = {
     "entrance": {
         "draw_entry_line": True,
@@ -44,20 +33,18 @@ CAMERA_CONFIG = {
 }
 
 
-def main():
+def main(input_video, output_dir="data/outputs/tracking", video_name=None):
 
     tracker = VisitorTracker()
 
-    video_name = Path(INPUT_VIDEO).stem
+    video_key = video_name or Path(input_video).stem
 
-    output_video = (
-        f"data/outputs/tracking/{video_name}_tracked.mp4"
-    )
+    output_video = Path(output_dir) / f"{video_key}_tracked.mp4"
 
-    cap = cv2.VideoCapture(INPUT_VIDEO)
+    cap = cv2.VideoCapture(input_video)
 
     if not cap.isOpened():
-        print(f"Error opening video: {INPUT_VIDEO}")
+        print(f"Error opening video: {input_video}")
         return
 
     fps = cap.get(cv2.CAP_PROP_FPS)
@@ -70,13 +57,13 @@ def main():
 
     total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
 
-    Path("data/outputs/tracking").mkdir(
+    Path(output_dir).mkdir(
         parents=True,
         exist_ok=True
     )
 
     writer = cv2.VideoWriter(
-        output_video,
+        str(output_video),
         cv2.VideoWriter_fourcc(*"mp4v"),
         fps,
         (width, height)
@@ -85,13 +72,15 @@ def main():
     frame_number = 0
 
     camera_cfg = CAMERA_CONFIG.get(
-        video_name,
+        video_key,
         {"draw_entry_line": False}
     )
 
     print("\nStarting Tracking Pipeline...\n")
-    print(f"Video : {video_name}")
+    print(f"Video : {video_key}")
     print(f"Frames: {total_frames}\n")
+
+    tracking_records = []
 
     while True:
 
@@ -102,12 +91,7 @@ def main():
 
         frame_number += 1
 
-        # =================================================
-        # DRAW ENTRY LINE ONLY FOR ENTRANCE CAMERA
-        # =================================================
-
         if camera_cfg.get("draw_entry_line", False):
-
             start_point = camera_cfg["entry_line_start"]
             end_point = camera_cfg["entry_line_end"]
 
@@ -131,10 +115,6 @@ def main():
                 (0, 0, 255),
                 2
             )
-
-        # =================================================
-        # TRACK PEOPLE
-        # =================================================
 
         tracks = tracker.track(frame)
 
@@ -175,16 +155,8 @@ def main():
 
         writer.write(frame)
 
-        # =================================================
-        # CLEAN PROGRESS LOG
-        # =================================================
-
         if frame_number % 100 == 0:
-
-            percent = (
-                frame_number / total_frames
-            ) * 100
-
+            percent = (frame_number / total_frames) * 100
             print(
                 f"[{percent:.2f}%] "
                 f"Frame {frame_number}/{total_frames}"
@@ -193,29 +165,36 @@ def main():
     cap.release()
     writer.release()
 
-    tracks_file = (
-            f"data/outputs/tracking/{video_name}_tracks.json"
-        )
+    tracks_file = Path(output_dir) / f"{video_key}_tracks.json"
 
-    with open(
-            tracks_file,
-            "w"
-        ) as file:
+    with open(tracks_file, "w") as file:
+        json.dump(tracking_records, file, indent=4)
 
-            json.dump(
-                tracking_records,
-                file,
-                indent=4
-            )
-
-    
-    print(
-            f"Tracking data saved to {tracks_file}"
-        )
-
+    print(f"Tracking data saved to {tracks_file}")
     print("\nTracking Completed")
     print(f"Output: {output_video}")
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(
+        description="Run tracking on a video and export track data."
+    )
+    parser.add_argument(
+        "--input-video",
+        default="data/raw/floor_a.mp4"
+    )
+    parser.add_argument(
+        "--output-dir",
+        default="data/outputs/tracking"
+    )
+    parser.add_argument(
+        "--video-name",
+        default=None,
+        choices=["entrance", "floor_a", "floor_b", "billing", "corner"]
+    )
+    args = parser.parse_args()
+    main(
+        args.input_video,
+        args.output_dir,
+        args.video_name
+    )

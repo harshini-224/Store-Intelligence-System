@@ -1,21 +1,18 @@
 from pathlib import Path
+import argparse
 import cv2
 
 from detector import PersonDetector
 
 
-INPUT_VIDEO = "data/raw/entrance.mp4"
-OUTPUT_VIDEO = "data/outputs/detection/entrance_detected.mp4"
-
-
-def main():
+def main(input_video, output_video=None, video_name=None, progress_interval=50):
 
     detector = PersonDetector()
 
-    cap = cv2.VideoCapture(INPUT_VIDEO)
+    cap = cv2.VideoCapture(input_video)
 
     if not cap.isOpened():
-        raise RuntimeError(f"Cannot open {INPUT_VIDEO}")
+        raise RuntimeError(f"Cannot open {input_video}")
 
     fps = cap.get(cv2.CAP_PROP_FPS)
 
@@ -25,19 +22,21 @@ def main():
     total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
 
     print("\n===== VIDEO INFO =====")
-    print(f"Video       : {INPUT_VIDEO}")
+    print(f"Video       : {input_video}")
     print(f"Resolution  : {width}x{height}")
     print(f"FPS         : {fps}")
     print(f"Frames      : {total_frames}")
     print("======================\n")
 
-    Path("data/outputs/detection").mkdir(
-        parents=True,
-        exist_ok=True
-    )
+    out_dir = Path("data/outputs/detection")
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    video_key = video_name or Path(input_video).stem
+    if output_video is None:
+        output_video = str(out_dir / f"{video_key}_detected.mp4")
 
     writer = cv2.VideoWriter(
-        OUTPUT_VIDEO,
+        output_video,
         cv2.VideoWriter_fourcc(*"mp4v"),
         fps,
         (width, height)
@@ -60,13 +59,7 @@ def main():
 
             x1, y1, x2, y2 = detection["bbox"]
 
-            cv2.rectangle(
-                frame,
-                (x1, y1),
-                (x2, y2),
-                (0, 255, 0),
-                2
-            )
+            cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
 
             cv2.putText(
                 frame,
@@ -75,29 +68,29 @@ def main():
                 cv2.FONT_HERSHEY_SIMPLEX,
                 0.5,
                 (0, 255, 0),
-                2
+                2,
             )
 
         writer.write(frame)
 
-        # progress update every 100 frames
-        if frame_number % 100 == 0:
-
+        # progress update at interval
+        if total_frames > 0 and frame_number % progress_interval == 0:
             percent = (frame_number / total_frames) * 100
-
-            print(
-                f"[{percent:6.2f}%] "
-                f"Frame {frame_number}/{total_frames} "
-                f"| Detections: {len(detections)}"
-            )
+            print(f"[{percent:.2f}%] Frame {frame_number}/{total_frames} | Detections: {len(detections)}")
 
     cap.release()
     writer.release()
 
     print("\n===== COMPLETED =====")
-    print(f"Output Video: {OUTPUT_VIDEO}")
+    print(f"Output Video: {output_video}")
     print("=====================\n")
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description="Run detection on a video and export detected video.")
+    parser.add_argument("--input-video", required=False, default="data/raw/entrance.mp4")
+    parser.add_argument("--output-video", required=False, default=None)
+    parser.add_argument("--video-name", required=False, default=None)
+    parser.add_argument("--progress-interval", type=int, default=50)
+    args = parser.parse_args()
+    main(args.input_video, args.output_video, args.video_name, args.progress_interval)

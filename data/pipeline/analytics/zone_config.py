@@ -52,3 +52,31 @@ FLOOR_B_ZONES = {
         "y2": 1080
     }
 }
+
+# Queue Zone Configuration
+# Defines billing queue zones per floor
+FLOOR_A_QUEUE_ZONE = {
+    "zone_id": "BILLING_QUEUE_A",
+    "x1": 0,
+    "y1": 1000,
+    "x2": 1920,
+    "y2": 1080,
+    "description": "Billing queue area for Floor A"
+}
+
+FLOOR_B_QUEUE_ZONE = {
+    "zone_id": "BILLING_QUEUE_B",
+    "x1": 0,
+    "y1": 1000,
+    "x2": 1920,
+    "y2": 1080,
+    "description": "Billing queue area for Floor B"
+}
+
+# Queue Analytics Configuration
+QUEUE_CONFIG = {
+    "QUEUE_ABANDON_WINDOW_SECONDS": 600,  # 10 minutes - time window to wait for conversion
+    "MIN_QUEUE_WAIT_SECONDS": 3,          # Minimum wait time to count as queue visit
+    "MIN_QUEUE_DEPTH_FOR_JOIN": 1,        # Minimum queue depth to emit JOIN event (1 = always)
+    "FPS": 30                              # Video frame rate
+}
