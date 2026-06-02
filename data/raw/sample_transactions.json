@@ -1,0 +1,8 @@
+[
+    {
+        "transaction_id": "DEMO_TXN_001",
+        "timestamp": "2026-05-30T10:05:00Z",
+        "amount": 150.5,
+        "payment_method": "credit_card"
+    }
+]

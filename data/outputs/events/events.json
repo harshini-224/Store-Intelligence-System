@@ -1,1 +1,2630 @@
-[]
+[
+    {
+        "event_id": "d0f7c15c19054af6bbc3074f13d63a0f",
+        "visitor_id": 1,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PROMO_WALKWAY",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "4db3af54f7ac4cfa9a7fd6ff8bd1bb06",
+        "visitor_id": 2,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "31979cdfdd2b4e33b3172dc67c0adc7b",
+        "visitor_id": 3,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "1a209a8121d141ad81d3b9da44b1c2c6",
+        "visitor_id": 1,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:15",
+        "event_type": "ZONE_EXIT",
+        "zone_id": "PROMO_WALKWAY",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 15
+        },
+        "event": "ZONE_EXIT"
+    },
+    {
+        "event_id": "acb20cf63bd947ce86969d501a154c47",
+        "visitor_id": 1,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:15",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 15
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "c55258d61258402b9c68f763f0066e6d",
+        "visitor_id": 10,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:46",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 46
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "c18f2b59a6a041859948ed8140fe746b",
+        "visitor_id": 10,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:46",
+        "event_type": "BILLING_QUEUE_JOIN",
+        "zone_id": "BILLING_QUEUE_A",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "queue_entry",
+            "queue_depth": 1,
+            "is_staff": false,
+            "frame": 46
+        },
+        "event": "BILLING_QUEUE_JOIN"
+    },
+    {
+        "event_id": "5f655f97053043e48d36227baee850bf",
+        "visitor_id": 19,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:84",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 84
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "6751fe03f5d14433bb5b26e0ea20f0d0",
+        "visitor_id": 20,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:90",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 90
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "94e926ac77bd4defa07568809e241c2f",
+        "visitor_id": 29,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:153",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 153
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "48067aef42dc433591cad0acc3746193",
+        "visitor_id": 43,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:227",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 227
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "78f18565e9d540899e46970a241c7610",
+        "visitor_id": 43,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:227",
+        "event_type": "BILLING_QUEUE_JOIN",
+        "zone_id": "BILLING_QUEUE_A",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "queue_entry",
+            "queue_depth": 2,
+            "is_staff": false,
+            "frame": 227
+        },
+        "event": "BILLING_QUEUE_JOIN"
+    },
+    {
+        "event_id": "8007b7c7727344caac67e3eca126881d",
+        "visitor_id": 48,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:241",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 241
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "cebdd2b7a3e249d2bdf5395be2679a39",
+        "visitor_id": 66,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:408",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 408
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "6115d0dfc4db4caeadc1b343e95723ee",
+        "visitor_id": 105,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:531",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 531
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "da2ccf1c09b143c5989205f94168deef",
+        "visitor_id": 111,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:538",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 538
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "1c218915bf49441eb38ffba89cbaddea",
+        "visitor_id": 113,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:544",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 544
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "d493b01e8be646e590a702f17049c7fc",
+        "visitor_id": 122,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:553",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 553
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "05b2a71cf6e143d28431082f99dacc5d",
+        "visitor_id": 125,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:564",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 564
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "014f4a56ac454402abca6005235ebbb7",
+        "visitor_id": 126,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:602",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 602
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "b88d99fd21df448abd6088e8fb39d563",
+        "visitor_id": 127,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:602",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 602
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "f36589579a4347ddb67a46b13b088ded",
+        "visitor_id": 130,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:617",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 617
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "ea4db634c73945aba51dec9d0439861c",
+        "visitor_id": 132,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:624",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 624
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "723ea677abd446b0be048e1ce0994b32",
+        "visitor_id": 133,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:626",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 626
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "0519882ba30b47f6b6a145909c5497dc",
+        "visitor_id": 134,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:629",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 629
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "318b6b476f7e4f93a3232d6e154a81da",
+        "visitor_id": 141,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:662",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 662
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "802758c5aa104ed998305f49139f20fb",
+        "visitor_id": 144,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:669",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 669
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "7a5004d1613e4575803906bf7bb467aa",
+        "visitor_id": 152,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:712",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 712
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "7abc442eac8f47e5b8b02b72606b10d2",
+        "visitor_id": 152,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:712",
+        "event_type": "BILLING_QUEUE_JOIN",
+        "zone_id": "BILLING_QUEUE_A",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "queue_entry",
+            "queue_depth": 3,
+            "is_staff": false,
+            "frame": 712
+        },
+        "event": "BILLING_QUEUE_JOIN"
+    },
+    {
+        "event_id": "3f2bcf3334eb44878416a453a09f9228",
+        "visitor_id": 155,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:723",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 723
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "f9c5df316a0447f28dddbcf82cc55eb1",
+        "visitor_id": 163,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:777",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 777
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "fae437abb99d468fbe331c90ab68d7b1",
+        "visitor_id": 175,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:817",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 817
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "f89e202246ba4b278632298c42e95129",
+        "visitor_id": 187,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:834",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 834
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "587d06fb2dcd46748978409f8dc19800",
+        "visitor_id": 196,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:840",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 840
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "66ff7db2a1a64f6bb9c89f4ba115ad58",
+        "visitor_id": 208,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:883",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 883
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "fae64555efd54aa78535f4d08e815c95",
+        "visitor_id": 66,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:885",
+        "event_type": "ZONE_EXIT",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 885
+        },
+        "event": "ZONE_EXIT"
+    },
+    {
+        "event_id": "1676fd3f732a485a862ac0c44e82f1a5",
+        "visitor_id": 66,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:885",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PROMO_WALKWAY",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 885
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "525392b90ae049d7b8b1c843d7a23bcc",
+        "visitor_id": 2,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:900",
+        "event_type": "ZONE_DWELL",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_dwell",
+            "is_staff": false,
+            "frame": 900
+        },
+        "event": "ZONE_DWELL"
+    },
+    {
+        "event_id": "d28f67975eb54baeb03cba26c1661a7a",
+        "visitor_id": 216,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:916",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 916
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "1f7a93ed48da4947b29cd3ad5106c852",
+        "visitor_id": 222,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:966",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 966
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "183eb98fed714400bd02acfa66a95ff8",
+        "visitor_id": 231,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1064",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1064
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "bed50541e359457a91bb584edd46452f",
+        "visitor_id": 271,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1168",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1168
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "b51a25d1809d4bc481065299f3ada3ab",
+        "visitor_id": 306,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1261",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1261
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "5af08214e4ae4625801a98c5c06d5d15",
+        "visitor_id": 66,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1308",
+        "event_type": "ZONE_EXIT",
+        "zone_id": "PROMO_WALKWAY",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1308
+        },
+        "event": "ZONE_EXIT"
+    },
+    {
+        "event_id": "1f946f186605473f93e578a58020addd",
+        "visitor_id": 66,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1308",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1308
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "290bde312ec746348ed884b9a76f2cfe",
+        "visitor_id": 333,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1364",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1364
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "5f5b22e81bc444d0b4e7d7a819cf3182",
+        "visitor_id": 357,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1468",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1468
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "2c19fc009237430d90351977dd5ac127",
+        "visitor_id": 359,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1470",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1470
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "a2440c60c139438a9048cfeef25a7ea6",
+        "visitor_id": 357,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1480",
+        "event_type": "ZONE_EXIT",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1480
+        },
+        "event": "ZONE_EXIT"
+    },
+    {
+        "event_id": "db527432ce974c6a8e3b9565fd69b4ca",
+        "visitor_id": 357,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1480",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1480
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "81c217c173304fa3a5d289601ceacffd",
+        "visitor_id": 357,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1481",
+        "event_type": "ZONE_EXIT",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1481
+        },
+        "event": "ZONE_EXIT"
+    },
+    {
+        "event_id": "3ed47809d8b34d2ca594d9752c4f0723",
+        "visitor_id": 357,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1481",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1481
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "f1036660d3664a52be2672abfeffbd63",
+        "visitor_id": 357,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1482",
+        "event_type": "ZONE_EXIT",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1482
+        },
+        "event": "ZONE_EXIT"
+    },
+    {
+        "event_id": "45293c1e6a15482885422ca57439a5c5",
+        "visitor_id": 357,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1482",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1482
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "f374396e356f4dc1885afbf0578f02bc",
+        "visitor_id": 363,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1490",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1490
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "df8b9873e1d94cf282e414184a6cea35",
+        "visitor_id": 365,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1493",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1493
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "1ff019c003bb44a89cebba592332aa16",
+        "visitor_id": 367,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1495",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1495
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "e2dbafff3e5c4ad9b272ef1d1fc830a5",
+        "visitor_id": 368,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1497",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1497
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "2ce6f6f0b34f4a0da50e56eeb500fd69",
+        "visitor_id": 375,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1512",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1512
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "7233e199b67b41129d78fa5b42efc3a5",
+        "visitor_id": 376,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1512",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1512
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "1c2a63cf62814941acc9b49e6c5fd881",
+        "visitor_id": 368,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1532",
+        "event_type": "ZONE_EXIT",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1532
+        },
+        "event": "ZONE_EXIT"
+    },
+    {
+        "event_id": "dbaa38a72bc34a3cbe869759ecc9e91d",
+        "visitor_id": 368,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1532",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1532
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "1f9c6784b7774e26b0b1b10a6eb680b3",
+        "visitor_id": 368,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1534",
+        "event_type": "ZONE_EXIT",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1534
+        },
+        "event": "ZONE_EXIT"
+    },
+    {
+        "event_id": "e007fab717a643f5be6d8df4f9347711",
+        "visitor_id": 368,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1534",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1534
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "244a1a6439964639bc425deceb24b8c1",
+        "visitor_id": 2,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1535",
+        "event_type": "ZONE_EXIT",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1535
+        },
+        "event": "ZONE_EXIT"
+    },
+    {
+        "event_id": "4e17cf97308d45fa9b5c72fd10e162ea",
+        "visitor_id": 2,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1535",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1535
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "d153855ef6e04273aa2ff02439fc7a54",
+        "visitor_id": 368,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1537",
+        "event_type": "ZONE_EXIT",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1537
+        },
+        "event": "ZONE_EXIT"
+    },
+    {
+        "event_id": "96f98a1283b04756ad80d479cadae3d1",
+        "visitor_id": 368,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1537",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1537
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "6cf658c3413647ce939833c7ffa66cdb",
+        "visitor_id": 385,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1537",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1537
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "2c5c59c7e83747bd94d3014b6e5d4a30",
+        "visitor_id": 368,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1549",
+        "event_type": "ZONE_EXIT",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1549
+        },
+        "event": "ZONE_EXIT"
+    },
+    {
+        "event_id": "ca5059c3780c4615bf76eb8dda9e91f2",
+        "visitor_id": 368,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1549",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1549
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "62542f37aed24a01ad61ab8b8ab1156a",
+        "visitor_id": 2,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1555",
+        "event_type": "ZONE_EXIT",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1555
+        },
+        "event": "ZONE_EXIT"
+    },
+    {
+        "event_id": "517c0a3a4bbe48248681d917c2c77c03",
+        "visitor_id": 2,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1555",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1555
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "1aa3604a1f0a460a92406690e320ec9f",
+        "visitor_id": 2,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1560",
+        "event_type": "ZONE_EXIT",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1560
+        },
+        "event": "ZONE_EXIT"
+    },
+    {
+        "event_id": "25ed4743565543d58c91cc41ff989116",
+        "visitor_id": 2,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1560",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1560
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "d5311242336143b59344905b197913dc",
+        "visitor_id": 396,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1562",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1562
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "f5b030211bc04c93aae79eca01213ac3",
+        "visitor_id": 399,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1566",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1566
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "6924df9839734ddab05c01d6946ba620",
+        "visitor_id": 404,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1573",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1573
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "88ce6219fb88401a8ffacbe5fb43c42e",
+        "visitor_id": 368,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1596",
+        "event_type": "ZONE_EXIT",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1596
+        },
+        "event": "ZONE_EXIT"
+    },
+    {
+        "event_id": "06ab51843c76469e826de0dd1525f2ae",
+        "visitor_id": 368,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1596",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1596
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "9efcce781d5f43759ec3e0be57bec663",
+        "visitor_id": 420,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1630",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1630
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "941036a331a24e2496a3d8564fd46f5f",
+        "visitor_id": 2,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1641",
+        "event_type": "ZONE_EXIT",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1641
+        },
+        "event": "ZONE_EXIT"
+    },
+    {
+        "event_id": "09ea1c6ceed04801ba51ba420b0642c9",
+        "visitor_id": 2,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1641",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1641
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "431c3163b01245ec99616c2b197beb41",
+        "visitor_id": 368,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1651",
+        "event_type": "ZONE_EXIT",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1651
+        },
+        "event": "ZONE_EXIT"
+    },
+    {
+        "event_id": "3e11279b8370483e9c9af7219b380c98",
+        "visitor_id": 368,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1651",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1651
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "f4d1cf7c57854eb4be652f6dd3e2f6e6",
+        "visitor_id": 431,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1692",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1692
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "7b165f3300384f16a806758a4fb18a37",
+        "visitor_id": 434,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1705",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1705
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "34b1ebfa2dbc43f79ad5a74b20581d9f",
+        "visitor_id": 438,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1708",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1708
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "7b3ca7c6767049f1be613881d91d8138",
+        "visitor_id": 450,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1723",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1723
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "8ed5c9d274c84f5390bb6307b3a735e1",
+        "visitor_id": 455,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1732",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1732
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "4fd00d5c97b340bda756d524b6e42c7e",
+        "visitor_id": 457,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1733",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1733
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "87f32563b2dc4cc0826fa40bbf1a2b0e",
+        "visitor_id": 66,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1742",
+        "event_type": "ZONE_DWELL",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_dwell",
+            "is_staff": false,
+            "frame": 1742
+        },
+        "event": "ZONE_DWELL"
+    },
+    {
+        "event_id": "7cf60faf13154c6c8715ed056b627d8a",
+        "visitor_id": 474,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1784",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1784
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "edea07d9e3554394aaaf5809c169562a",
+        "visitor_id": 479,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1807",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1807
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "51988b1660df46ee9e995d12d6d31105",
+        "visitor_id": 492,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1862",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1862
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "15f5848959484a988fcd546adae6e9df",
+        "visitor_id": 2,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1918",
+        "event_type": "ZONE_DWELL",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_dwell",
+            "is_staff": false,
+            "frame": 1918
+        },
+        "event": "ZONE_DWELL"
+    },
+    {
+        "event_id": "c88054f21091444fbc19488adf622889",
+        "visitor_id": 550,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:1941",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 1941
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "1606a68d797a477caaa3f9f4e9aca6c4",
+        "visitor_id": 587,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:2161",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 2161
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "6557f38909494635b8b0adfaa7181e36",
+        "visitor_id": 623,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:2206",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 2206
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "4d27cadc285a41bdb22023b4baf8a92c",
+        "visitor_id": 649,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:2303",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 2303
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "6cd5e56d14f1456b9477c8445377de52",
+        "visitor_id": 658,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:2405",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 2405
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "1836c1c39de442a0b5407dca3fb3bb5e",
+        "visitor_id": 670,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:2441",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 2441
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "52e5044c6efe4cf389e892d4e9be9ee2",
+        "visitor_id": 679,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:2477",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 2477
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "12b892db5ede40cf8bfe68a6671d5ad0",
+        "visitor_id": 688,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:2607",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 2607
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "29418bd1595445808eb87949bb670133",
+        "visitor_id": 66,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:2642",
+        "event_type": "ZONE_DWELL",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_dwell",
+            "is_staff": false,
+            "frame": 2642
+        },
+        "event": "ZONE_DWELL"
+    },
+    {
+        "event_id": "ad1d55ac92ed48df8f7dd7868659f5e4",
+        "visitor_id": 706,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:2644",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PROMO_WALKWAY",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 2644
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "4f3b97f8f39b4bb99cd4b34d6833c078",
+        "visitor_id": 706,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:2644",
+        "event_type": "BILLING_QUEUE_JOIN",
+        "zone_id": "BILLING_QUEUE_A",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "queue_entry",
+            "queue_depth": 4,
+            "is_staff": false,
+            "frame": 2644
+        },
+        "event": "BILLING_QUEUE_JOIN"
+    },
+    {
+        "event_id": "1858b58a13b4461690f587036f21cbdf",
+        "visitor_id": 709,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:2646",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 2646
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "c7c6f60538d841699ef6cd47a59bba54",
+        "visitor_id": 706,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:2650",
+        "event_type": "ZONE_EXIT",
+        "zone_id": "PROMO_WALKWAY",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 2650
+        },
+        "event": "ZONE_EXIT"
+    },
+    {
+        "event_id": "a0f1176f86ed40faa21704f3f258f915",
+        "visitor_id": 706,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:2650",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 2650
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "e02f5f82ba3d47feb6b403958450c063",
+        "visitor_id": 712,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:2653",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 2653
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "03bba5fea4664c3dabfa96101a50f475",
+        "visitor_id": 2,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:2820",
+        "event_type": "ZONE_DWELL",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_dwell",
+            "is_staff": false,
+            "frame": 2820
+        },
+        "event": "ZONE_DWELL"
+    },
+    {
+        "event_id": "df364459c7114111b15b880c3eace982",
+        "visitor_id": 734,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:2844",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 2844
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "bb743686f0d840feab228ebf34db86ae",
+        "visitor_id": 737,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:2850",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 2850
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "cdebd721511e46b5a7fa905b4b186efd",
+        "visitor_id": 756,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:2951",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 2951
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "bade848279a64180a226233d5dee416f",
+        "visitor_id": 783,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:3012",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 3012
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "9d184a6ea0fc4197a2e88874f9ff2c72",
+        "visitor_id": 791,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:3017",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 3017
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "0805fcbe54484b6fb09fd2146208ff9c",
+        "visitor_id": 797,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:3056",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 3056
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "654bf2cc76db479bb209577b8b020b29",
+        "visitor_id": 799,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:3067",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 3067
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "d3069722772a4aa99258d0c7ef802432",
+        "visitor_id": 805,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:3096",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 3096
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "84fdfaefabc941fca5409e4839e04779",
+        "visitor_id": 807,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:3102",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 3102
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "f4a2d9d2ba564fa78dafb4e04c24e46d",
+        "visitor_id": 813,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:3108",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 3108
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "f5e2dee294d6493f941b0eefebd90838",
+        "visitor_id": 831,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:3137",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 3137
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "7952f0fb1e114143904babf6754034a3",
+        "visitor_id": 846,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:3169",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 3169
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "9b6898bb1514436fa2e7b7973a9cfcb5",
+        "visitor_id": 861,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:3206",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 3206
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "9647dab0d8504df5b7086e940afd2e41",
+        "visitor_id": 884,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:3252",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 3252
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "8eb17c8230f247ba95189489db78f9b4",
+        "visitor_id": 885,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:3254",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 3254
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "6da7f1ae68fe4f75bce036eaca2eb5d3",
+        "visitor_id": 893,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:3279",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 3279
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "e7e7c026c4264f0fa6a0144c6bd4ab39",
+        "visitor_id": 895,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:3284",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 3284
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "cce3b99a019448efbeba3b86cf2865a9",
+        "visitor_id": 898,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:3288",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 3288
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "403eef3cd26946548530bc657ae3e667",
+        "visitor_id": 903,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:3316",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 3316
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "d52c76eeb4bd490e9db6e99f9bbf616e",
+        "visitor_id": 913,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:3329",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 3329
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "3677df79177a44aebc57d949bbd0c873",
+        "visitor_id": 947,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:3377",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 3377
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "6bb2536eaf6845a0a721bcaca7bac609",
+        "visitor_id": 959,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:3388",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 3388
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "f48a8496154244b98637596855790d9b",
+        "visitor_id": 961,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:3391",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 3391
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "b66050e998574019a5b5144687899ff3",
+        "visitor_id": 963,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:3394",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 3394
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "6b95a9fe28274531833ad9448e4885b2",
+        "visitor_id": 964,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:3398",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 3398
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "3bbf09e7ee614019b391c056da3d01f3",
+        "visitor_id": 970,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:3407",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 3407
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "8a84a45c214841c2a37fa4324265b534",
+        "visitor_id": 975,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:3424",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 3424
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "4bdee9de9de042ab9754cdf0a7134df5",
+        "visitor_id": 995,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:3476",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 3476
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "a4918bed12f94c4eb316712842534aa6",
+        "visitor_id": 1015,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:3528",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 3528
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "90a40faa1fc940e786e3bdc1b9e345ab",
+        "visitor_id": 1018,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:3530",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 3530
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "d6f1256cd9784ba8b773ddf86ddbdf07",
+        "visitor_id": 1018,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:3535",
+        "event_type": "ZONE_EXIT",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 3535
+        },
+        "event": "ZONE_EXIT"
+    },
+    {
+        "event_id": "a0d51c9413ff4f8eb70cb9eda4a5e36b",
+        "visitor_id": 1018,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:3535",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 3535
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "2c8e9d5a2ca945e58b1d7f4e612fa226",
+        "visitor_id": 1018,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:3548",
+        "event_type": "ZONE_EXIT",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 3548
+        },
+        "event": "ZONE_EXIT"
+    },
+    {
+        "event_id": "156e22e2a2fe4db58661d8efadb79aab",
+        "visitor_id": 1018,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:3548",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 3548
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "b9092b63c46846968371ea593ec7ead0",
+        "visitor_id": 1035,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:3616",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 3616
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "dfcc95ae61b04e44b16b54e3c168b994",
+        "visitor_id": 1067,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:3736",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 3736
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "e674db098b4d45be9b6041681eb2a775",
+        "visitor_id": 2,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:3755",
+        "event_type": "ZONE_DWELL",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_dwell",
+            "is_staff": false,
+            "frame": 3755
+        },
+        "event": "ZONE_DWELL"
+    },
+    {
+        "event_id": "8a5f0100f2a94db8a45c361ea3b2d273",
+        "visitor_id": 1068,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:3761",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 3761
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "62a87e6e9ce24274975af87c4507d150",
+        "visitor_id": 1078,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:3788",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 3788
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "bbfa8a04f6cd4d1fb80e3e96beb72a3d",
+        "visitor_id": 1094,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:3845",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 3845
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "4f75237758984be6bc822f88fb0f758d",
+        "visitor_id": 1096,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:3873",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 3873
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "db6ee8176521443297bf9271f7a0d552",
+        "visitor_id": 1101,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:3886",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 3886
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "e65bce95b8e7430ea04d109b31940cd0",
+        "visitor_id": 1102,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:3893",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 3893
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "bc3f367c79ef4b138b9cfdbcf8d58d5c",
+        "visitor_id": 1103,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:3912",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 3912
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "3eea51eeb72f4cde8002315676f51b10",
+        "visitor_id": 1117,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:3977",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 3977
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "ec3ee15fbc764e1fa128f657ff4cbf2a",
+        "visitor_id": 1118,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:3978",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 3978
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "e31d8536ae424d7d932c5a66f94569ee",
+        "visitor_id": 1132,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:4078",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 4078
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "b5f9901607824f01b3141a47987ba19d",
+        "visitor_id": 1111,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:4130",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 4130
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "e46438a860294c74b1e7d62751212372",
+        "visitor_id": 885,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:4153",
+        "event_type": "ZONE_DWELL",
+        "zone_id": "BEAUTY_CONSULTATION",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_dwell",
+            "is_staff": false,
+            "frame": 4153
+        },
+        "event": "ZONE_DWELL"
+    },
+    {
+        "event_id": "1a65853db64244009687d7c193d96b08",
+        "visitor_id": 1145,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:4172",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 4172
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "f6de559eae45464fbccfa6bba8da7180",
+        "visitor_id": 1147,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:4183",
+        "event_type": "ZONE_ENTER",
+        "zone_id": "PREMIUM_SKINCARE",
+        "confidence": 1.0,
+        "metadata": {
+            "source": "zone_transition",
+            "is_staff": false,
+            "frame": 4183
+        },
+        "event": "ZONE_ENTER"
+    },
+    {
+        "event_id": "e816b8dee14e4ab5b0da29d69581bc25",
+        "visitor_id": 134,
+        "store_id": "STORE_001",
+        "camera_id": "CAM_FLOOR_A",
+        "timestamp": "frame:4187",
+        "event_type": "PURCHASE",
+        "zone_id": null,
+        "confidence": 1.0,
+        "metadata": {
+            "source": "conversion_correlation",
+            "is_staff": false,
+            "frame": 4187
+        },
+        "event": "PURCHASE"
+    }
+]
