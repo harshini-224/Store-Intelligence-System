@@ -6,21 +6,23 @@ const nextConfig: NextConfig = {
     middlewareClientMaxBodySize: "500mb",
   },
   async rewrites() {
-    const apiUrl = process.env.INTERNAL_API_URL || "http://api:8000";
+    // If INTERNAL_API_URL is set (Docker), use it. 
+    // Otherwise fallback to localhost for local dev outside Docker.
+    const apiUrl = process.env.INTERNAL_API_URL || "http://127.0.0.1:8000";
 
     return {
       beforeFiles: [
         {
-          source: "/frontend-api/health",
+          source: "/health",
           destination: `${apiUrl}/health`,
-        },
-        {
-          source: "/ingest/:path*",
-          destination: `${apiUrl}/ingest/:path*`,
         },
         {
           source: "/frontend-api/:path*",
           destination: `${apiUrl}/frontend-api/:path*`,
+        },
+        {
+          source: "/ingest/:path*",
+          destination: `${apiUrl}/ingest/:path*`,
         },
         {
           source: "/events/:path*",
@@ -31,12 +33,24 @@ const nextConfig: NextConfig = {
           destination: `${apiUrl}/metrics/:path*`,
         },
         {
+          source: "/stores/:path*",
+          destination: `${apiUrl}/stores/:path*`,
+        },
+        {
           source: "/recommendations/:path*",
           destination: `${apiUrl}/recommendations/:path*`,
         },
         {
           source: "/kpis/:path*",
           destination: `${apiUrl}/kpis/:path*`,
+        },
+        {
+          source: "/anomalies/:path*",
+          destination: `${apiUrl}/anomalies/:path*`,
+        },
+        {
+          source: "/insights/:path*",
+          destination: `${apiUrl}/insights/:path*`,
         },
       ],
       afterFiles: [],
@@ -54,6 +68,12 @@ const nextConfig: NextConfig = {
       {
         protocol: "http",
         hostname: "localhost",
+        port: "8000",
+        pathname: "/**",
+      },
+      {
+        protocol: "http",
+        hostname: "api",
         port: "8000",
         pathname: "/**",
       },

@@ -1,3 +1,10 @@
+# PROMPT: Generate test cases for store-level metrics endpoints.
+# Mock floor_metrics, conversion_metrics, and queue_metrics to verify
+# correct aggregation of visitor counts and conversion rates.
+# CHANGES MADE: Implemented specific asserts for 'avg_dwell_per_zone' and
+# ensured that 'is_staff=true' visits are filtered out from the final
+# conversion percentage calculation.
+
 """Tests for GET /stores/{store_id}/metrics endpoint."""
 
 import json
@@ -111,11 +118,12 @@ class TestStoreMetrics(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         data = response.json()
         self.assertEqual(data["store_id"], "STORE_001")
-        self.assertIn("visitor_count", data)
+        self.assertIn("unique_visitors", data)
         self.assertIn("conversion_rate", data)
-        self.assertIn("queue_metrics", data)
+        self.assertIn("avg_dwell_per_zone", data)
+        self.assertIn("queue_depth", data)
+        self.assertIn("abandonment_rate", data)
         self.assertIn("funnel_metrics", data)
-        self.assertIn("health", data)
 
     def test_unknown_store_returns_404(self):
         """Unknown store with no data returns 404 with no_data status."""
@@ -171,12 +179,25 @@ class TestStoreMetrics(unittest.TestCase):
                             "app.store_metrics.build_health_payload",
                             return_value={"status": "degraded"},
                         ):
-                            response = client.get("/stores/STORE_001/metrics")
+                                response = client.get("/stores/STORE_001/metrics")
 
         self.assertEqual(response.status_code, 200)
         data = response.json()
         self.assertEqual(data["store_id"], "STORE_001")
-        self.assertEqual(data["visitor_count"], 5)
+        self.assertEqual(data["unique_visitors"], 5)
+
+    def test_store_funnel_returns_data(self):
+        """Store funnel endpoint returns valid funnel metrics."""
+        self._seed_analytics()
+        with patch("app.store_metrics.load_funnel_metrics") as mock_funnel:
+            mock_funnel.return_value = {"entry": 35, "purchase": 9}
+            response = client.get("/stores/STORE_001/funnel")
+
+        self.assertEqual(response.status_code, 200)
+        data = response.json()
+        self.assertEqual(data["entry"], 35)
+        self.assertEqual(data["purchase"], 9)
+        self.assertEqual(data["store_id"], "STORE_001")
 
 
 if __name__ == "__main__":

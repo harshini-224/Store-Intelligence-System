@@ -145,9 +145,17 @@ class EventGenerator:
                 row["metadata"] = json.dumps(row["metadata"])
                 writer.writerow(row)
 
+    def save_jsonl(self):
+        """Save events in JSONL format (one JSON object per line)."""
+        output_file = self.output_dir / "events.jsonl"
+        with open(output_file, "w") as f:
+            for event in self.events:
+                f.write(json.dumps(event, default=str) + "\n")
+
     def save_all(self):
 
         self.save_json()
         self.save_csv()
+        self.save_jsonl()
 
         print("\nEvents Saved Successfully")

@@ -1,4 +1,9 @@
-from fastapi import FastAPI
+import logging
+import time
+import uuid
+
+from fastapi import FastAPI, Request
+from starlette.middleware.base import BaseHTTPMiddleware
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.health import router as health_router
@@ -15,9 +20,49 @@ from app.ai_insights import router as ai_router
 from app.video_ingest import router as video_ingest_router
 from app.store_metrics import router as store_metrics_router
 
-app = FastAPI(
-    title="Store Intelligence API"
+# ---------------------------------------------------------------------------
+# Structured logging
+# ---------------------------------------------------------------------------
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(message)s",
 )
+logger = logging.getLogger("store_intelligence")
+
+
+class StructuredLoggingMiddleware(BaseHTTPMiddleware):
+    """Log every request with trace_id, endpoint, latency, and status."""
+
+    async def dispatch(self, request: Request, call_next):
+        trace_id = request.headers.get("x-trace-id", uuid.uuid4().hex[:16])
+        request.state.trace_id = trace_id
+        start = time.perf_counter()
+
+        response = await call_next(request)
+
+        latency_ms = round((time.perf_counter() - start) * 1000, 2)
+        store_id = request.path_params.get("store_id", "-")
+        logger.info(
+            '{"trace_id":"%s","method":"%s","path":"%s","store_id":"%s",'
+            '"status_code":%d,"latency_ms":%.2f}',
+            trace_id,
+            request.method,
+            request.url.path,
+            store_id,
+            response.status_code,
+            latency_ms,
+        )
+        response.headers["x-trace-id"] = trace_id
+        return response
+
+
+app = FastAPI(
+    title="Store Intelligence API",
+    description="Real-time store analytics from CCTV footage",
+    version="1.0.0",
+)
+
+app.add_middleware(StructuredLoggingMiddleware)
 
 app.add_middleware(
     CORSMiddleware,

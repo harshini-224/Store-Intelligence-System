@@ -1,3 +1,10 @@
+# PROMPT: Create tests for a heuristic group detection algorithm that uses
+# spatial distance and co-movement duration. Include edge cases for
+# dense crowds and solo visitors walking near each other briefly.
+# CHANGES MADE: Adjusted the velocity threshold to match the pixels-per-frame
+# metric used in the ByteTrack implementation and added negative tests
+# for visitors walking in opposite directions.
+
 """Tests for heuristic group detection."""
 
 import sys

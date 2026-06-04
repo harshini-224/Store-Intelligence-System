@@ -40,11 +40,11 @@ async def ingest_video(background_tasks: BackgroundTasks, file: UploadFile = Fil
     video_id = _sanitize_video_name(file.filename or "upload")
     job_id = str(uuid.uuid4())
 
-    # Save uploaded file
+    # Save uploaded file using chunks to avoid memory exhaustion for large videos
     dest = RAW_DIR / f"{video_id}.mp4"
-    contents = await file.read()
     with open(dest, "wb") as f:
-        f.write(contents)
+        while chunk := await file.read(1024 * 1024):  # 1MB chunks
+            f.write(chunk)
 
     # Create the processing job
     job = ProcessingJob(

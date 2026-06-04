@@ -1,4 +1,8 @@
-"""Tests for canonical event schema with backward compatibility."""
+# PROMPT: Generate unit tests for a 9-field canonical retail event schema.
+# Include validation for required fields, data types, and specific event_types
+# such as ENTRY, ZONE_ENTER, and BILLING_QUEUE_JOIN.
+# CHANGES MADE: Added specific retail zone names from store_layout.json and
+# implemented a mock database session for schema validation testing.
 
 import unittest
 

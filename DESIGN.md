@@ -141,3 +141,19 @@ Tradeoffs:
 - Heatmaps are only staff-aware when generated from track files containing `is_staff`.
 - Staleness in `/health` depends on event timestamps, so frame-only event streams cannot prove freshness.
 - File-based outputs are reviewer-friendly but should be hardened for production concurrency.
+
+## AI-Assisted Decisions
+
+This project leveraged AI to accelerate architectural planning and edge-case handling. Below are key design points where LLMs influenced the outcome:
+
+### 1. Ingestion Idempotency Strategy
+- **AI Suggestion**: Use a database-backed unique constraint on `event_id`.
+- **My Decision**: I initially agreed, but decided to implement an in-memory `SEEN_EVENT_IDS` set for the challenge prototype to minimize deployment complexity and meet the "zero manual steps" requirement. In a production environment, I would revert to the AI's suggested database constraint.
+
+### 2. Anomaly Severity Levels
+- **AI Suggestion**: Use a simple `HIGH/MEDIUM/LOW` severity scale.
+- **My Decision**: I overrode this in favor of `CRITICAL/WARN/INFO` to align better with standard SRE/monitoring practices (e.g., critical alerts for queue spikes that require immediate staffing action vs. info alerts for low traffic).
+
+### 3. Funnel Session Deduplication
+- **AI Suggestion**: Count every `ENTRY` event as a visit.
+- **My Decision**: I refined this to use a time-and-position based re-entry detection heuristic. This ensures that a physical person stepping out of the store and returning within a short window is treated as one session in the funnel, significantly improving the accuracy of the Conversion Rate metric.

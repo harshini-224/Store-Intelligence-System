@@ -11,6 +11,7 @@ import re
 import subprocess
 import sys
 import time
+import logging
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Dict, List, Optional
@@ -23,6 +24,8 @@ PIPELINE_STAGES = [
     "Conversion Analytics",
     "Heatmap",
 ]
+
+logger = logging.getLogger("store_intelligence")
 
 ZONE_SUPPORTED = {"floor_a", "floor_b"}
 DEMO_MAX_SECONDS = 20
@@ -118,6 +121,7 @@ async def _run_script(cmd: List[str], job: ProcessingJob, cwd: str) -> bool:
 
     except Exception as exc:
         job.logs.append(f"ERROR: {exc}")
+        logger.error(f"Pipeline script error: {exc}")
         return False
 
 
@@ -134,6 +138,8 @@ def _set_stage(job: ProcessingJob, stage_index: int):
             job.remaining_seconds = max(0, int(total_est - elapsed))
         else:
             job.remaining_seconds = job.estimated_total_seconds
+    
+    logger.info(f"Stage changed to: {job.current_stage} ({job.progress}%)")
 
 
 def get_video_duration(path: str) -> float:
@@ -230,6 +236,7 @@ async def run_pipeline(job: ProcessingJob):
             f"Video duration: {duration:.1f}s. Demo mode analyzes the first "
             f"{analyzed_seconds:.1f}s for a reliable hackathon run."
         )
+        logger.info(f"Video {video_id} duration: {duration:.1f}s. Demo limit: {DEMO_MAX_SECONDS}s.")
         max_frames_arg = ["--max-seconds", str(DEMO_MAX_SECONDS)]
     else:
         job.estimated_total_seconds = 90
