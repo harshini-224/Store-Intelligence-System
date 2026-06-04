@@ -19,6 +19,7 @@ from data.pipeline.analytics.zone_config import (
 from data.pipeline.analytics.zone_manager import ZoneManager
 from data.pipeline.analytics.queue_tracker import QueueTracker
 from data.pipeline.analytics.funnel_tracker import compute_funnel_metrics
+from data.pipeline.tracking.group_detector import detect_groups_from_tracks
 
 LINE_DEFINITIONS = {
     "entrance": ((850, 1080), (1550, 0)),
@@ -93,7 +94,8 @@ def process_tracks(
     reentry_time_window_seconds: int = 10,
     reentry_position_threshold_pixels: int = 1000,
     reentry_size_threshold_ratio: float = 0.5,
-    converted_visitor_ids: Optional[Set[int]] = None
+    converted_visitor_ids: Optional[Set[int]] = None,
+    group_assignments: Optional[Dict[int, str]] = None
 ) -> EventGenerator:
 
     camera_id = camera_id or build_default_camera_id(video_name)
@@ -119,6 +121,7 @@ def process_tracks(
         fps=fps,
         video_start_time=video_start_time
     )
+    event_generator.group_assignments = group_assignments or {}
     dwell_tracker = DwellTimeTracker(fps)
     queue_tracker = QueueTracker(
         fps=fps,
@@ -463,6 +466,14 @@ def main(
         conversion_sessions_file
     )
 
+    # Priority 4: Run Group Detection from tracks
+    group_detector = detect_groups_from_tracks(tracks)
+    group_assignments = group_detector.get_group_assignments()
+    
+    # Collect all unique track IDs for solo/group counts
+    all_vids = {r.get("track_id") for r in tracks}
+    group_stats = group_detector.get_group_analytics(all_vids)
+
     event_generator = process_tracks(
         tracks,
         video_name=video_name,
@@ -475,8 +486,37 @@ def main(
         reentry_time_window_seconds=reentry_time_window_seconds,
         reentry_position_threshold_pixels=reentry_position_threshold_pixels,
         reentry_size_threshold_ratio=reentry_size_threshold_ratio,
-        converted_visitor_ids=converted_visitor_ids
+        converted_visitor_ids=converted_visitor_ids,
+        group_assignments=group_assignments
     )
+    event_generator.group_stats = group_stats
+
+    if not event_generator.events and tracks:
+        first_frame_by_visitor: Dict[int, int] = {}
+        confidence_by_visitor: Dict[int, float] = {}
+        for record in tracks:
+            visitor_id = int(record.get("track_id"))
+            frame_no = int(record.get("frame", 1))
+            first_frame_by_visitor[visitor_id] = min(
+                frame_no,
+                first_frame_by_visitor.get(visitor_id, frame_no)
+            )
+            confidence_by_visitor[visitor_id] = max(
+                float(record.get("confidence", 1.0)),
+                confidence_by_visitor.get(visitor_id, 0.0)
+            )
+
+        for visitor_id, frame_no in sorted(first_frame_by_visitor.items()):
+            event_generator.add_event(
+                visitor_id=visitor_id,
+                event_type="TRACK_OBSERVED",
+                frame_no=frame_no,
+                confidence=confidence_by_visitor.get(visitor_id, 1.0),
+                metadata={
+                    "source": "tracking_fallback",
+                    "reason": "No line-crossing event detected"
+                }
+            )
 
     event_generator.save_all()
 
@@ -494,6 +534,7 @@ def main(
 
         summary["_queue_metrics"] = event_generator.queue_tracker.get_queue_stats()
         summary["_funnel_metrics"] = event_generator.funnel_metrics
+        summary["_group_metrics"] = getattr(event_generator, "group_stats", {})
 
         with open(summary_path, "w") as file:
             json.dump(summary, file, indent=4)
@@ -512,8 +553,7 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--video-name",
-        default="entrance",
-        choices=["entrance", "floor_a", "floor_b", "billing", "corner"]
+        default="entrance"
     )
     parser.add_argument(
         "--store-id",

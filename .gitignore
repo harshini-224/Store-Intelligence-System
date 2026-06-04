@@ -17,3 +17,26 @@ venv/
 Thumbs.db
 
 data/uploads/*.mp4
+
+# dependencies
+node_modules/
+
+# next.js
+.next/
+
+# build outputs
+out/
+dist/
+build/
+
+# logs
+*.log
+
+# environment files
+.env
+.env.local
+
+frontend/node_modules/
+frontend/.next/
+node_modules/
+.next/

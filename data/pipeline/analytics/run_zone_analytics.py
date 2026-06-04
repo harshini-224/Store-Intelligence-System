@@ -92,8 +92,7 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--video-name",
-        default="floor_b",
-        choices=["floor_a", "floor_b"]
+        default="floor_b"
     )
     parser.add_argument(
         "--tracks-file",

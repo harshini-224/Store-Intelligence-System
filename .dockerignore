@@ -1,0 +1,15 @@
+.git
+__pycache__
+*.pyc
+venv/
+.env
+*.mp4
+data/raw/
+data/uploads/
+data/outputs/
+frontend/
+dashboard/
+.DS_Store
+Thumbs.db
+node_modules/
+.next/

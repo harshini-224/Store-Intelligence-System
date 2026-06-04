@@ -27,3 +27,11 @@
 ## Data Assumptions
 - Billing zone visits are detected from track positions.
 - POS transactions must include a timestamp to support accurate temporal correlation.
+
+## Group Detection
+- Groups are detected using a heuristic based on spatial proximity, co-movement duration, and velocity similarity.
+- Default thresholds: `GROUP_DISTANCE_THRESHOLD=150` pixels, `GROUP_FRAME_THRESHOLD=15` frames, `GROUP_VELOCITY_THRESHOLD=50.0` pixels/frame.
+- Thresholds are configurable via environment variables.
+- Group detection runs on tracking output only — no deep learning or external services.
+- Limitations: false positives in crowded scenes, no cross-camera group tracking, may miss groups with varied walking speeds.
+- Each group member's events include `metadata.group_id` for downstream analysis.

@@ -1,165 +1,22 @@
 event_id,visitor_id,store_id,camera_id,timestamp,event_type,zone_id,confidence,metadata,event
-d0f7c15c19054af6bbc3074f13d63a0f,1,STORE_001,CAM_FLOOR_A,frame:1,ZONE_ENTER,PROMO_WALKWAY,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1}",ZONE_ENTER
-4db3af54f7ac4cfa9a7fd6ff8bd1bb06,2,STORE_001,CAM_FLOOR_A,frame:1,ZONE_ENTER,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1}",ZONE_ENTER
-31979cdfdd2b4e33b3172dc67c0adc7b,3,STORE_001,CAM_FLOOR_A,frame:1,ZONE_ENTER,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1}",ZONE_ENTER
-1a209a8121d141ad81d3b9da44b1c2c6,1,STORE_001,CAM_FLOOR_A,frame:15,ZONE_EXIT,PROMO_WALKWAY,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 15}",ZONE_EXIT
-acb20cf63bd947ce86969d501a154c47,1,STORE_001,CAM_FLOOR_A,frame:15,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 15}",ZONE_ENTER
-c55258d61258402b9c68f763f0066e6d,10,STORE_001,CAM_FLOOR_A,frame:46,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 46}",ZONE_ENTER
-c18f2b59a6a041859948ed8140fe746b,10,STORE_001,CAM_FLOOR_A,frame:46,BILLING_QUEUE_JOIN,BILLING_QUEUE_A,1.0,"{""source"": ""queue_entry"", ""queue_depth"": 1, ""is_staff"": false, ""frame"": 46}",BILLING_QUEUE_JOIN
-5f655f97053043e48d36227baee850bf,19,STORE_001,CAM_FLOOR_A,frame:84,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 84}",ZONE_ENTER
-6751fe03f5d14433bb5b26e0ea20f0d0,20,STORE_001,CAM_FLOOR_A,frame:90,ZONE_ENTER,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 90}",ZONE_ENTER
-94e926ac77bd4defa07568809e241c2f,29,STORE_001,CAM_FLOOR_A,frame:153,ZONE_ENTER,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 153}",ZONE_ENTER
-48067aef42dc433591cad0acc3746193,43,STORE_001,CAM_FLOOR_A,frame:227,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 227}",ZONE_ENTER
-78f18565e9d540899e46970a241c7610,43,STORE_001,CAM_FLOOR_A,frame:227,BILLING_QUEUE_JOIN,BILLING_QUEUE_A,1.0,"{""source"": ""queue_entry"", ""queue_depth"": 2, ""is_staff"": false, ""frame"": 227}",BILLING_QUEUE_JOIN
-8007b7c7727344caac67e3eca126881d,48,STORE_001,CAM_FLOOR_A,frame:241,ZONE_ENTER,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 241}",ZONE_ENTER
-cebdd2b7a3e249d2bdf5395be2679a39,66,STORE_001,CAM_FLOOR_A,frame:408,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 408}",ZONE_ENTER
-6115d0dfc4db4caeadc1b343e95723ee,105,STORE_001,CAM_FLOOR_A,frame:531,ZONE_ENTER,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 531}",ZONE_ENTER
-da2ccf1c09b143c5989205f94168deef,111,STORE_001,CAM_FLOOR_A,frame:538,ZONE_ENTER,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 538}",ZONE_ENTER
-1c218915bf49441eb38ffba89cbaddea,113,STORE_001,CAM_FLOOR_A,frame:544,ZONE_ENTER,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 544}",ZONE_ENTER
-d493b01e8be646e590a702f17049c7fc,122,STORE_001,CAM_FLOOR_A,frame:553,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 553}",ZONE_ENTER
-05b2a71cf6e143d28431082f99dacc5d,125,STORE_001,CAM_FLOOR_A,frame:564,ZONE_ENTER,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 564}",ZONE_ENTER
-014f4a56ac454402abca6005235ebbb7,126,STORE_001,CAM_FLOOR_A,frame:602,ZONE_ENTER,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 602}",ZONE_ENTER
-b88d99fd21df448abd6088e8fb39d563,127,STORE_001,CAM_FLOOR_A,frame:602,ZONE_ENTER,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 602}",ZONE_ENTER
-f36589579a4347ddb67a46b13b088ded,130,STORE_001,CAM_FLOOR_A,frame:617,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 617}",ZONE_ENTER
-ea4db634c73945aba51dec9d0439861c,132,STORE_001,CAM_FLOOR_A,frame:624,ZONE_ENTER,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 624}",ZONE_ENTER
-723ea677abd446b0be048e1ce0994b32,133,STORE_001,CAM_FLOOR_A,frame:626,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 626}",ZONE_ENTER
-0519882ba30b47f6b6a145909c5497dc,134,STORE_001,CAM_FLOOR_A,frame:629,ZONE_ENTER,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 629}",ZONE_ENTER
-318b6b476f7e4f93a3232d6e154a81da,141,STORE_001,CAM_FLOOR_A,frame:662,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 662}",ZONE_ENTER
-802758c5aa104ed998305f49139f20fb,144,STORE_001,CAM_FLOOR_A,frame:669,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 669}",ZONE_ENTER
-7a5004d1613e4575803906bf7bb467aa,152,STORE_001,CAM_FLOOR_A,frame:712,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 712}",ZONE_ENTER
-7abc442eac8f47e5b8b02b72606b10d2,152,STORE_001,CAM_FLOOR_A,frame:712,BILLING_QUEUE_JOIN,BILLING_QUEUE_A,1.0,"{""source"": ""queue_entry"", ""queue_depth"": 3, ""is_staff"": false, ""frame"": 712}",BILLING_QUEUE_JOIN
-3f2bcf3334eb44878416a453a09f9228,155,STORE_001,CAM_FLOOR_A,frame:723,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 723}",ZONE_ENTER
-f9c5df316a0447f28dddbcf82cc55eb1,163,STORE_001,CAM_FLOOR_A,frame:777,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 777}",ZONE_ENTER
-fae437abb99d468fbe331c90ab68d7b1,175,STORE_001,CAM_FLOOR_A,frame:817,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 817}",ZONE_ENTER
-f89e202246ba4b278632298c42e95129,187,STORE_001,CAM_FLOOR_A,frame:834,ZONE_ENTER,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 834}",ZONE_ENTER
-587d06fb2dcd46748978409f8dc19800,196,STORE_001,CAM_FLOOR_A,frame:840,ZONE_ENTER,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 840}",ZONE_ENTER
-66ff7db2a1a64f6bb9c89f4ba115ad58,208,STORE_001,CAM_FLOOR_A,frame:883,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 883}",ZONE_ENTER
-fae64555efd54aa78535f4d08e815c95,66,STORE_001,CAM_FLOOR_A,frame:885,ZONE_EXIT,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 885}",ZONE_EXIT
-1676fd3f732a485a862ac0c44e82f1a5,66,STORE_001,CAM_FLOOR_A,frame:885,ZONE_ENTER,PROMO_WALKWAY,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 885}",ZONE_ENTER
-525392b90ae049d7b8b1c843d7a23bcc,2,STORE_001,CAM_FLOOR_A,frame:900,ZONE_DWELL,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_dwell"", ""is_staff"": false, ""frame"": 900}",ZONE_DWELL
-d28f67975eb54baeb03cba26c1661a7a,216,STORE_001,CAM_FLOOR_A,frame:916,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 916}",ZONE_ENTER
-1f7a93ed48da4947b29cd3ad5106c852,222,STORE_001,CAM_FLOOR_A,frame:966,ZONE_ENTER,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 966}",ZONE_ENTER
-183eb98fed714400bd02acfa66a95ff8,231,STORE_001,CAM_FLOOR_A,frame:1064,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1064}",ZONE_ENTER
-bed50541e359457a91bb584edd46452f,271,STORE_001,CAM_FLOOR_A,frame:1168,ZONE_ENTER,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1168}",ZONE_ENTER
-b51a25d1809d4bc481065299f3ada3ab,306,STORE_001,CAM_FLOOR_A,frame:1261,ZONE_ENTER,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1261}",ZONE_ENTER
-5af08214e4ae4625801a98c5c06d5d15,66,STORE_001,CAM_FLOOR_A,frame:1308,ZONE_EXIT,PROMO_WALKWAY,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1308}",ZONE_EXIT
-1f946f186605473f93e578a58020addd,66,STORE_001,CAM_FLOOR_A,frame:1308,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1308}",ZONE_ENTER
-290bde312ec746348ed884b9a76f2cfe,333,STORE_001,CAM_FLOOR_A,frame:1364,ZONE_ENTER,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1364}",ZONE_ENTER
-5f5b22e81bc444d0b4e7d7a819cf3182,357,STORE_001,CAM_FLOOR_A,frame:1468,ZONE_ENTER,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1468}",ZONE_ENTER
-2c19fc009237430d90351977dd5ac127,359,STORE_001,CAM_FLOOR_A,frame:1470,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1470}",ZONE_ENTER
-a2440c60c139438a9048cfeef25a7ea6,357,STORE_001,CAM_FLOOR_A,frame:1480,ZONE_EXIT,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1480}",ZONE_EXIT
-db527432ce974c6a8e3b9565fd69b4ca,357,STORE_001,CAM_FLOOR_A,frame:1480,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1480}",ZONE_ENTER
-81c217c173304fa3a5d289601ceacffd,357,STORE_001,CAM_FLOOR_A,frame:1481,ZONE_EXIT,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1481}",ZONE_EXIT
-3ed47809d8b34d2ca594d9752c4f0723,357,STORE_001,CAM_FLOOR_A,frame:1481,ZONE_ENTER,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1481}",ZONE_ENTER
-f1036660d3664a52be2672abfeffbd63,357,STORE_001,CAM_FLOOR_A,frame:1482,ZONE_EXIT,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1482}",ZONE_EXIT
-45293c1e6a15482885422ca57439a5c5,357,STORE_001,CAM_FLOOR_A,frame:1482,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1482}",ZONE_ENTER
-f374396e356f4dc1885afbf0578f02bc,363,STORE_001,CAM_FLOOR_A,frame:1490,ZONE_ENTER,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1490}",ZONE_ENTER
-df8b9873e1d94cf282e414184a6cea35,365,STORE_001,CAM_FLOOR_A,frame:1493,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1493}",ZONE_ENTER
-1ff019c003bb44a89cebba592332aa16,367,STORE_001,CAM_FLOOR_A,frame:1495,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1495}",ZONE_ENTER
-e2dbafff3e5c4ad9b272ef1d1fc830a5,368,STORE_001,CAM_FLOOR_A,frame:1497,ZONE_ENTER,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1497}",ZONE_ENTER
-2ce6f6f0b34f4a0da50e56eeb500fd69,375,STORE_001,CAM_FLOOR_A,frame:1512,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1512}",ZONE_ENTER
-7233e199b67b41129d78fa5b42efc3a5,376,STORE_001,CAM_FLOOR_A,frame:1512,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1512}",ZONE_ENTER
-1c2a63cf62814941acc9b49e6c5fd881,368,STORE_001,CAM_FLOOR_A,frame:1532,ZONE_EXIT,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1532}",ZONE_EXIT
-dbaa38a72bc34a3cbe869759ecc9e91d,368,STORE_001,CAM_FLOOR_A,frame:1532,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1532}",ZONE_ENTER
-1f9c6784b7774e26b0b1b10a6eb680b3,368,STORE_001,CAM_FLOOR_A,frame:1534,ZONE_EXIT,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1534}",ZONE_EXIT
-e007fab717a643f5be6d8df4f9347711,368,STORE_001,CAM_FLOOR_A,frame:1534,ZONE_ENTER,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1534}",ZONE_ENTER
-244a1a6439964639bc425deceb24b8c1,2,STORE_001,CAM_FLOOR_A,frame:1535,ZONE_EXIT,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1535}",ZONE_EXIT
-4e17cf97308d45fa9b5c72fd10e162ea,2,STORE_001,CAM_FLOOR_A,frame:1535,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1535}",ZONE_ENTER
-d153855ef6e04273aa2ff02439fc7a54,368,STORE_001,CAM_FLOOR_A,frame:1537,ZONE_EXIT,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1537}",ZONE_EXIT
-96f98a1283b04756ad80d479cadae3d1,368,STORE_001,CAM_FLOOR_A,frame:1537,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1537}",ZONE_ENTER
-6cf658c3413647ce939833c7ffa66cdb,385,STORE_001,CAM_FLOOR_A,frame:1537,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1537}",ZONE_ENTER
-2c5c59c7e83747bd94d3014b6e5d4a30,368,STORE_001,CAM_FLOOR_A,frame:1549,ZONE_EXIT,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1549}",ZONE_EXIT
-ca5059c3780c4615bf76eb8dda9e91f2,368,STORE_001,CAM_FLOOR_A,frame:1549,ZONE_ENTER,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1549}",ZONE_ENTER
-62542f37aed24a01ad61ab8b8ab1156a,2,STORE_001,CAM_FLOOR_A,frame:1555,ZONE_EXIT,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1555}",ZONE_EXIT
-517c0a3a4bbe48248681d917c2c77c03,2,STORE_001,CAM_FLOOR_A,frame:1555,ZONE_ENTER,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1555}",ZONE_ENTER
-1aa3604a1f0a460a92406690e320ec9f,2,STORE_001,CAM_FLOOR_A,frame:1560,ZONE_EXIT,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1560}",ZONE_EXIT
-25ed4743565543d58c91cc41ff989116,2,STORE_001,CAM_FLOOR_A,frame:1560,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1560}",ZONE_ENTER
-d5311242336143b59344905b197913dc,396,STORE_001,CAM_FLOOR_A,frame:1562,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1562}",ZONE_ENTER
-f5b030211bc04c93aae79eca01213ac3,399,STORE_001,CAM_FLOOR_A,frame:1566,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1566}",ZONE_ENTER
-6924df9839734ddab05c01d6946ba620,404,STORE_001,CAM_FLOOR_A,frame:1573,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1573}",ZONE_ENTER
-88ce6219fb88401a8ffacbe5fb43c42e,368,STORE_001,CAM_FLOOR_A,frame:1596,ZONE_EXIT,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1596}",ZONE_EXIT
-06ab51843c76469e826de0dd1525f2ae,368,STORE_001,CAM_FLOOR_A,frame:1596,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1596}",ZONE_ENTER
-9efcce781d5f43759ec3e0be57bec663,420,STORE_001,CAM_FLOOR_A,frame:1630,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1630}",ZONE_ENTER
-941036a331a24e2496a3d8564fd46f5f,2,STORE_001,CAM_FLOOR_A,frame:1641,ZONE_EXIT,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1641}",ZONE_EXIT
-09ea1c6ceed04801ba51ba420b0642c9,2,STORE_001,CAM_FLOOR_A,frame:1641,ZONE_ENTER,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1641}",ZONE_ENTER
-431c3163b01245ec99616c2b197beb41,368,STORE_001,CAM_FLOOR_A,frame:1651,ZONE_EXIT,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1651}",ZONE_EXIT
-3e11279b8370483e9c9af7219b380c98,368,STORE_001,CAM_FLOOR_A,frame:1651,ZONE_ENTER,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1651}",ZONE_ENTER
-f4d1cf7c57854eb4be652f6dd3e2f6e6,431,STORE_001,CAM_FLOOR_A,frame:1692,ZONE_ENTER,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1692}",ZONE_ENTER
-7b165f3300384f16a806758a4fb18a37,434,STORE_001,CAM_FLOOR_A,frame:1705,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1705}",ZONE_ENTER
-34b1ebfa2dbc43f79ad5a74b20581d9f,438,STORE_001,CAM_FLOOR_A,frame:1708,ZONE_ENTER,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1708}",ZONE_ENTER
-7b3ca7c6767049f1be613881d91d8138,450,STORE_001,CAM_FLOOR_A,frame:1723,ZONE_ENTER,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1723}",ZONE_ENTER
-8ed5c9d274c84f5390bb6307b3a735e1,455,STORE_001,CAM_FLOOR_A,frame:1732,ZONE_ENTER,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1732}",ZONE_ENTER
-4fd00d5c97b340bda756d524b6e42c7e,457,STORE_001,CAM_FLOOR_A,frame:1733,ZONE_ENTER,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1733}",ZONE_ENTER
-87f32563b2dc4cc0826fa40bbf1a2b0e,66,STORE_001,CAM_FLOOR_A,frame:1742,ZONE_DWELL,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_dwell"", ""is_staff"": false, ""frame"": 1742}",ZONE_DWELL
-7cf60faf13154c6c8715ed056b627d8a,474,STORE_001,CAM_FLOOR_A,frame:1784,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1784}",ZONE_ENTER
-edea07d9e3554394aaaf5809c169562a,479,STORE_001,CAM_FLOOR_A,frame:1807,ZONE_ENTER,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1807}",ZONE_ENTER
-51988b1660df46ee9e995d12d6d31105,492,STORE_001,CAM_FLOOR_A,frame:1862,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1862}",ZONE_ENTER
-15f5848959484a988fcd546adae6e9df,2,STORE_001,CAM_FLOOR_A,frame:1918,ZONE_DWELL,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_dwell"", ""is_staff"": false, ""frame"": 1918}",ZONE_DWELL
-c88054f21091444fbc19488adf622889,550,STORE_001,CAM_FLOOR_A,frame:1941,ZONE_ENTER,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 1941}",ZONE_ENTER
-1606a68d797a477caaa3f9f4e9aca6c4,587,STORE_001,CAM_FLOOR_A,frame:2161,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 2161}",ZONE_ENTER
-6557f38909494635b8b0adfaa7181e36,623,STORE_001,CAM_FLOOR_A,frame:2206,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 2206}",ZONE_ENTER
-4d27cadc285a41bdb22023b4baf8a92c,649,STORE_001,CAM_FLOOR_A,frame:2303,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 2303}",ZONE_ENTER
-6cd5e56d14f1456b9477c8445377de52,658,STORE_001,CAM_FLOOR_A,frame:2405,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 2405}",ZONE_ENTER
-1836c1c39de442a0b5407dca3fb3bb5e,670,STORE_001,CAM_FLOOR_A,frame:2441,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 2441}",ZONE_ENTER
-52e5044c6efe4cf389e892d4e9be9ee2,679,STORE_001,CAM_FLOOR_A,frame:2477,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 2477}",ZONE_ENTER
-12b892db5ede40cf8bfe68a6671d5ad0,688,STORE_001,CAM_FLOOR_A,frame:2607,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 2607}",ZONE_ENTER
-29418bd1595445808eb87949bb670133,66,STORE_001,CAM_FLOOR_A,frame:2642,ZONE_DWELL,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_dwell"", ""is_staff"": false, ""frame"": 2642}",ZONE_DWELL
-ad1d55ac92ed48df8f7dd7868659f5e4,706,STORE_001,CAM_FLOOR_A,frame:2644,ZONE_ENTER,PROMO_WALKWAY,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 2644}",ZONE_ENTER
-4f3b97f8f39b4bb99cd4b34d6833c078,706,STORE_001,CAM_FLOOR_A,frame:2644,BILLING_QUEUE_JOIN,BILLING_QUEUE_A,1.0,"{""source"": ""queue_entry"", ""queue_depth"": 4, ""is_staff"": false, ""frame"": 2644}",BILLING_QUEUE_JOIN
-1858b58a13b4461690f587036f21cbdf,709,STORE_001,CAM_FLOOR_A,frame:2646,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 2646}",ZONE_ENTER
-c7c6f60538d841699ef6cd47a59bba54,706,STORE_001,CAM_FLOOR_A,frame:2650,ZONE_EXIT,PROMO_WALKWAY,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 2650}",ZONE_EXIT
-a0f1176f86ed40faa21704f3f258f915,706,STORE_001,CAM_FLOOR_A,frame:2650,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 2650}",ZONE_ENTER
-e02f5f82ba3d47feb6b403958450c063,712,STORE_001,CAM_FLOOR_A,frame:2653,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 2653}",ZONE_ENTER
-03bba5fea4664c3dabfa96101a50f475,2,STORE_001,CAM_FLOOR_A,frame:2820,ZONE_DWELL,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_dwell"", ""is_staff"": false, ""frame"": 2820}",ZONE_DWELL
-df364459c7114111b15b880c3eace982,734,STORE_001,CAM_FLOOR_A,frame:2844,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 2844}",ZONE_ENTER
-bb743686f0d840feab228ebf34db86ae,737,STORE_001,CAM_FLOOR_A,frame:2850,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 2850}",ZONE_ENTER
-cdebd721511e46b5a7fa905b4b186efd,756,STORE_001,CAM_FLOOR_A,frame:2951,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 2951}",ZONE_ENTER
-bade848279a64180a226233d5dee416f,783,STORE_001,CAM_FLOOR_A,frame:3012,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 3012}",ZONE_ENTER
-9d184a6ea0fc4197a2e88874f9ff2c72,791,STORE_001,CAM_FLOOR_A,frame:3017,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 3017}",ZONE_ENTER
-0805fcbe54484b6fb09fd2146208ff9c,797,STORE_001,CAM_FLOOR_A,frame:3056,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 3056}",ZONE_ENTER
-654bf2cc76db479bb209577b8b020b29,799,STORE_001,CAM_FLOOR_A,frame:3067,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 3067}",ZONE_ENTER
-d3069722772a4aa99258d0c7ef802432,805,STORE_001,CAM_FLOOR_A,frame:3096,ZONE_ENTER,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 3096}",ZONE_ENTER
-84fdfaefabc941fca5409e4839e04779,807,STORE_001,CAM_FLOOR_A,frame:3102,ZONE_ENTER,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 3102}",ZONE_ENTER
-f4a2d9d2ba564fa78dafb4e04c24e46d,813,STORE_001,CAM_FLOOR_A,frame:3108,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 3108}",ZONE_ENTER
-f5e2dee294d6493f941b0eefebd90838,831,STORE_001,CAM_FLOOR_A,frame:3137,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 3137}",ZONE_ENTER
-7952f0fb1e114143904babf6754034a3,846,STORE_001,CAM_FLOOR_A,frame:3169,ZONE_ENTER,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 3169}",ZONE_ENTER
-9b6898bb1514436fa2e7b7973a9cfcb5,861,STORE_001,CAM_FLOOR_A,frame:3206,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 3206}",ZONE_ENTER
-9647dab0d8504df5b7086e940afd2e41,884,STORE_001,CAM_FLOOR_A,frame:3252,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 3252}",ZONE_ENTER
-8eb17c8230f247ba95189489db78f9b4,885,STORE_001,CAM_FLOOR_A,frame:3254,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 3254}",ZONE_ENTER
-6da7f1ae68fe4f75bce036eaca2eb5d3,893,STORE_001,CAM_FLOOR_A,frame:3279,ZONE_ENTER,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 3279}",ZONE_ENTER
-e7e7c026c4264f0fa6a0144c6bd4ab39,895,STORE_001,CAM_FLOOR_A,frame:3284,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 3284}",ZONE_ENTER
-cce3b99a019448efbeba3b86cf2865a9,898,STORE_001,CAM_FLOOR_A,frame:3288,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 3288}",ZONE_ENTER
-403eef3cd26946548530bc657ae3e667,903,STORE_001,CAM_FLOOR_A,frame:3316,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 3316}",ZONE_ENTER
-d52c76eeb4bd490e9db6e99f9bbf616e,913,STORE_001,CAM_FLOOR_A,frame:3329,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 3329}",ZONE_ENTER
-3677df79177a44aebc57d949bbd0c873,947,STORE_001,CAM_FLOOR_A,frame:3377,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 3377}",ZONE_ENTER
-6bb2536eaf6845a0a721bcaca7bac609,959,STORE_001,CAM_FLOOR_A,frame:3388,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 3388}",ZONE_ENTER
-f48a8496154244b98637596855790d9b,961,STORE_001,CAM_FLOOR_A,frame:3391,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 3391}",ZONE_ENTER
-b66050e998574019a5b5144687899ff3,963,STORE_001,CAM_FLOOR_A,frame:3394,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 3394}",ZONE_ENTER
-6b95a9fe28274531833ad9448e4885b2,964,STORE_001,CAM_FLOOR_A,frame:3398,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 3398}",ZONE_ENTER
-3bbf09e7ee614019b391c056da3d01f3,970,STORE_001,CAM_FLOOR_A,frame:3407,ZONE_ENTER,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 3407}",ZONE_ENTER
-8a84a45c214841c2a37fa4324265b534,975,STORE_001,CAM_FLOOR_A,frame:3424,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 3424}",ZONE_ENTER
-4bdee9de9de042ab9754cdf0a7134df5,995,STORE_001,CAM_FLOOR_A,frame:3476,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 3476}",ZONE_ENTER
-a4918bed12f94c4eb316712842534aa6,1015,STORE_001,CAM_FLOOR_A,frame:3528,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 3528}",ZONE_ENTER
-90a40faa1fc940e786e3bdc1b9e345ab,1018,STORE_001,CAM_FLOOR_A,frame:3530,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 3530}",ZONE_ENTER
-d6f1256cd9784ba8b773ddf86ddbdf07,1018,STORE_001,CAM_FLOOR_A,frame:3535,ZONE_EXIT,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 3535}",ZONE_EXIT
-a0d51c9413ff4f8eb70cb9eda4a5e36b,1018,STORE_001,CAM_FLOOR_A,frame:3535,ZONE_ENTER,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 3535}",ZONE_ENTER
-2c8e9d5a2ca945e58b1d7f4e612fa226,1018,STORE_001,CAM_FLOOR_A,frame:3548,ZONE_EXIT,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 3548}",ZONE_EXIT
-156e22e2a2fe4db58661d8efadb79aab,1018,STORE_001,CAM_FLOOR_A,frame:3548,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 3548}",ZONE_ENTER
-b9092b63c46846968371ea593ec7ead0,1035,STORE_001,CAM_FLOOR_A,frame:3616,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 3616}",ZONE_ENTER
-dfcc95ae61b04e44b16b54e3c168b994,1067,STORE_001,CAM_FLOOR_A,frame:3736,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 3736}",ZONE_ENTER
-e674db098b4d45be9b6041681eb2a775,2,STORE_001,CAM_FLOOR_A,frame:3755,ZONE_DWELL,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_dwell"", ""is_staff"": false, ""frame"": 3755}",ZONE_DWELL
-8a5f0100f2a94db8a45c361ea3b2d273,1068,STORE_001,CAM_FLOOR_A,frame:3761,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 3761}",ZONE_ENTER
-62a87e6e9ce24274975af87c4507d150,1078,STORE_001,CAM_FLOOR_A,frame:3788,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 3788}",ZONE_ENTER
-bbfa8a04f6cd4d1fb80e3e96beb72a3d,1094,STORE_001,CAM_FLOOR_A,frame:3845,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 3845}",ZONE_ENTER
-4f75237758984be6bc822f88fb0f758d,1096,STORE_001,CAM_FLOOR_A,frame:3873,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 3873}",ZONE_ENTER
-db6ee8176521443297bf9271f7a0d552,1101,STORE_001,CAM_FLOOR_A,frame:3886,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 3886}",ZONE_ENTER
-e65bce95b8e7430ea04d109b31940cd0,1102,STORE_001,CAM_FLOOR_A,frame:3893,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 3893}",ZONE_ENTER
-bc3f367c79ef4b138b9cfdbcf8d58d5c,1103,STORE_001,CAM_FLOOR_A,frame:3912,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 3912}",ZONE_ENTER
-3eea51eeb72f4cde8002315676f51b10,1117,STORE_001,CAM_FLOOR_A,frame:3977,ZONE_ENTER,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 3977}",ZONE_ENTER
-ec3ee15fbc764e1fa128f657ff4cbf2a,1118,STORE_001,CAM_FLOOR_A,frame:3978,ZONE_ENTER,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 3978}",ZONE_ENTER
-e31d8536ae424d7d932c5a66f94569ee,1132,STORE_001,CAM_FLOOR_A,frame:4078,ZONE_ENTER,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 4078}",ZONE_ENTER
-b5f9901607824f01b3141a47987ba19d,1111,STORE_001,CAM_FLOOR_A,frame:4130,ZONE_ENTER,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 4130}",ZONE_ENTER
-e46438a860294c74b1e7d62751212372,885,STORE_001,CAM_FLOOR_A,frame:4153,ZONE_DWELL,BEAUTY_CONSULTATION,1.0,"{""source"": ""zone_dwell"", ""is_staff"": false, ""frame"": 4153}",ZONE_DWELL
-1a65853db64244009687d7c193d96b08,1145,STORE_001,CAM_FLOOR_A,frame:4172,ZONE_ENTER,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 4172}",ZONE_ENTER
-f6de559eae45464fbccfa6bba8da7180,1147,STORE_001,CAM_FLOOR_A,frame:4183,ZONE_ENTER,PREMIUM_SKINCARE,1.0,"{""source"": ""zone_transition"", ""is_staff"": false, ""frame"": 4183}",ZONE_ENTER
-e816b8dee14e4ab5b0da29d69581bc25,134,STORE_001,CAM_FLOOR_A,frame:4187,PURCHASE,,1.0,"{""source"": ""conversion_correlation"", ""is_staff"": false, ""frame"": 4187}",PURCHASE
+cd5221dbc67b4f5f9bd6297e88ee2bad,32,STORE_001,CAM_BILLING,frame:255,EXIT,,1.0,"{""source"": ""line_crossing"", ""is_staff"": false, ""frame"": 255, ""group_id"": ""GROUP_1""}",EXIT
+e97109057a5e45c3975c2f7fe3386b49,32,STORE_001,CAM_BILLING,frame:269,ENTRY,,1.0,"{""source"": ""line_crossing"", ""is_staff"": false, ""frame"": 269, ""group_id"": ""GROUP_1""}",ENTRY
+3abbd415d53841fea512aaf78e7f44ab,32,STORE_001,CAM_BILLING,frame:270,EXIT,,1.0,"{""source"": ""line_crossing"", ""is_staff"": false, ""frame"": 270, ""group_id"": ""GROUP_1""}",EXIT
+649c343877bd4c2e86ef15803bd9eb43,32,STORE_001,CAM_BILLING,frame:368,ENTRY,,1.0,"{""source"": ""line_crossing"", ""is_staff"": false, ""frame"": 368, ""group_id"": ""GROUP_1""}",ENTRY
+6aadc29406aa48aca771854f79840c12,32,STORE_001,CAM_BILLING,frame:1019,EXIT,,1.0,"{""source"": ""line_crossing"", ""is_staff"": false, ""frame"": 1019, ""group_id"": ""GROUP_1""}",EXIT
+0374cebb087f4eafafc046a42b2af2a0,32,STORE_001,CAM_BILLING,frame:1020,REENTRY,,1.0,"{""source"": ""reentry_inference"", ""raw_track_id"": 32, ""is_staff"": false, ""frame"": 1020, ""group_id"": ""GROUP_1""}",REENTRY
+9b784bf0317f4c2b95c9ebbbc72378c0,32,STORE_001,CAM_BILLING,frame:1024,EXIT,,1.0,"{""source"": ""line_crossing"", ""is_staff"": false, ""frame"": 1024, ""group_id"": ""GROUP_1""}",EXIT
+3f67df2d401e4aad9fd2daa905689663,32,STORE_001,CAM_BILLING,frame:1051,ENTRY,,1.0,"{""source"": ""line_crossing"", ""is_staff"": false, ""frame"": 1051, ""group_id"": ""GROUP_1""}",ENTRY
+91dfc9326a22431ab3fe3b2ee0cb1ad6,32,STORE_001,CAM_BILLING,frame:1053,EXIT,,1.0,"{""source"": ""line_crossing"", ""is_staff"": false, ""frame"": 1053, ""group_id"": ""GROUP_1""}",EXIT
+802952d9ab2b412c8f08672def258698,196,STORE_001,CAM_BILLING,frame:1381,ENTRY,,1.0,"{""source"": ""line_crossing"", ""is_staff"": false, ""frame"": 1381, ""group_id"": ""GROUP_1""}",ENTRY
+b8bf712d8b854216a87f504f0f947da3,196,STORE_001,CAM_BILLING,frame:1383,EXIT,,1.0,"{""source"": ""line_crossing"", ""is_staff"": false, ""frame"": 1383, ""group_id"": ""GROUP_1""}",EXIT
+fda4b3f186744adfa6c6abcdff373388,196,STORE_001,CAM_BILLING,frame:1579,ENTRY,,1.0,"{""source"": ""line_crossing"", ""is_staff"": false, ""frame"": 1579, ""group_id"": ""GROUP_1""}",ENTRY
+32082a85dbc94778a2b81f389b00d58a,353,STORE_001,CAM_BILLING,frame:1966,EXIT,,1.0,"{""source"": ""line_crossing"", ""is_staff"": false, ""frame"": 1966}",EXIT
+31cdcab4b09140d09be43c236048edbf,353,STORE_001,CAM_BILLING,frame:1995,ENTRY,,1.0,"{""source"": ""line_crossing"", ""is_staff"": false, ""frame"": 1995}",ENTRY
+944a53bac5e546ddbc959760d653e43b,353,STORE_001,CAM_BILLING,frame:1997,EXIT,,1.0,"{""source"": ""line_crossing"", ""is_staff"": false, ""frame"": 1997}",EXIT
+59cbd1f4f12b4a368235acf3526bf537,353,STORE_001,CAM_BILLING,frame:2005,ENTRY,,1.0,"{""source"": ""line_crossing"", ""is_staff"": false, ""frame"": 2005}",ENTRY
+dffc87a0535944339ca52670762c15f4,353,STORE_001,CAM_BILLING,frame:2007,EXIT,,1.0,"{""source"": ""line_crossing"", ""is_staff"": false, ""frame"": 2007}",EXIT
+77976f7b4f754e619c1efc80f21a78c0,353,STORE_001,CAM_BILLING,frame:2023,ENTRY,,1.0,"{""source"": ""line_crossing"", ""is_staff"": false, ""frame"": 2023}",ENTRY
+ff7a0edb9de1487e856c80abe6a95e04,353,STORE_001,CAM_BILLING,frame:2080,EXIT,,1.0,"{""source"": ""line_crossing"", ""is_staff"": false, ""frame"": 2080}",EXIT
+2ce48fd32b494753a4e98bc7b282fe08,391,STORE_001,CAM_BILLING,frame:2135,EXIT,,1.0,"{""source"": ""line_crossing"", ""is_staff"": false, ""frame"": 2135}",EXIT
+aad9b43809994d6b95e6ee69483a87b9,465,STORE_001,CAM_BILLING,frame:2616,EXIT,,1.0,"{""source"": ""line_crossing"", ""is_staff"": false, ""frame"": 2616}",EXIT

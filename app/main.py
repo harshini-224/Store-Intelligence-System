@@ -1,44 +1,42 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 
 from app.health import router as health_router
 from app.ingestion import router as ingestion_router
 from app.metrics import router as metrics_router
 from app.funnel import router as funnel_router
+from app.frontend_api import router as frontend_router
 from app.anomalies import router as anomalies_router
 from app.insights import router as insights_router
 from app.heatmap import router as heatmap_router
 from app.recommendation import router as recommendations_router
 from app.kpis import router as kpis_router
 from app.ai_insights import router as ai_router
+from app.video_ingest import router as video_ingest_router
+from app.store_metrics import router as store_metrics_router
 
 app = FastAPI(
     title="Store Intelligence API"
 )
 
-app.include_router(
-    health_router
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
-app.include_router(
-    ingestion_router
-)
-
-app.include_router(
-    metrics_router
-)
-
-app.include_router(
-    funnel_router
-)
-
-app.include_router(
-    anomalies_router
-)
-
+app.include_router(health_router)
+app.include_router(ingestion_router)
+app.include_router(metrics_router)
+app.include_router(funnel_router)
+app.include_router(anomalies_router)
 app.include_router(insights_router)
 app.include_router(heatmap_router)
 app.include_router(recommendations_router)
 app.include_router(kpis_router)
-app.include_router(
-    ai_router
-)
+app.include_router(ai_router)
+app.include_router(video_ingest_router)
+app.include_router(store_metrics_router)
+app.include_router(frontend_router)

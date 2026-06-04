@@ -27,6 +27,9 @@ class EventGenerator:
         self.output_dir = Path("data/outputs/events")
         self.output_dir.mkdir(parents=True, exist_ok=True)
 
+        # Optional group assignments: visitor_id -> group_id
+        self.group_assignments = {}
+
     def frame_to_timestamp(self, frame_no: int) -> str:
         if self.video_start_time:
             timestamp = self.video_start_time + timedelta(
@@ -54,7 +57,7 @@ class EventGenerator:
         metadata = metadata or {}
         metadata.setdefault("frame", frame_no)
 
-        return {
+        event = {
             "event_id": uuid.uuid4().hex,
             "visitor_id": visitor_id,
             "store_id": store_id or self.store_id,
@@ -66,6 +69,13 @@ class EventGenerator:
             "metadata": metadata,
             "event": event_type
         }
+
+        # Inject group_id if this visitor belongs to a group
+        group_id = self.group_assignments.get(visitor_id)
+        if group_id:
+            event["metadata"]["group_id"] = group_id
+
+        return event
 
     def add_event(
         self,

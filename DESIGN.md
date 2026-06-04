@@ -116,6 +116,24 @@ Tradeoffs:
 - Streamlit is effective for demos and internal tools.
 - For high-scale production, dashboard execution and pipeline processing should be separated from request handling.
 
+## Why Heuristic Group Detection?
+
+The challenge rubric includes group handling. The system detects visitor groups using spatial distance, co-movement duration, and velocity similarity heuristics rather than deep learning or external services.
+
+Benefits:
+
+- Runs entirely on existing tracking output; no additional models or APIs needed.
+- Thresholds are configurable via environment variables (`GROUP_DISTANCE_THRESHOLD`, `GROUP_FRAME_THRESHOLD`, `GROUP_VELOCITY_THRESHOLD`).
+- Group analytics (group vs. solo visitors) are exposed through the metrics API.
+- Group IDs are embedded in event metadata for downstream analysis.
+
+Tradeoffs:
+
+- Heuristic detection will miss groups that maintain large spacing or walk at different speeds.
+- Brief coincidental proximity can lead to false positives if thresholds are too lenient.
+- The approach works best in uncrowded scenes; in dense crowds, many unrelated visitors may appear as groups.
+- No re-identification across cameras — groups are detected per-camera only.
+
 ## Known Design Constraints
 
 - Multi-camera re-identification is not a complete identity graph.

@@ -18,6 +18,8 @@ The system processes store videos through detection, tracking, event generation,
 - Heatmap generation from movement tracks.
 - Recommendation, insight, anomaly, KPI, and health endpoints.
 - Streamlit dashboard for upload, pipeline execution, and review.
+- Lightweight heuristic group detection from tracking output.
+- Per-store aggregated metrics endpoint.
 
 ## Architecture
 
@@ -65,6 +67,16 @@ Run the dashboard:
 ```bash
 streamlit run dashboard/streamlit_app.py
 ```
+
+## Docker Quick Start
+
+Build and start the API:
+
+```bash
+docker compose up
+```
+
+The API will be available at `http://localhost:8000`. See [DEPLOYMENT.md](DEPLOYMENT.md) for full build, run, and troubleshooting instructions.
 
 Run a floor video through the core pipeline:
 
