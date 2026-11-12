@@ -1,0 +1,35 @@
+services:
+  # ── FastAPI Backend (API) ──────────────────────────────────────────────────
+  - type: web
+    name: store-intelligence-api
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    plan: free
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: "1"
+    disk:
+      name: store-data
+      mountPath: /app/data
+      sizeGB: 1
+    healthCheckPath: /health
+
+  # ── Next.js Frontend ───────────────────────────────────────────────────────
+  - type: web
+    name: store-intelligence-frontend
+    runtime: docker
+    dockerfilePath: ./frontend/Dockerfile
+    dockerContext: ./frontend
+    plan: free
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NEXT_TELEMETRY_DISABLED
+        value: "1"
+      # Set this AFTER deploying the API — paste the API service URL here
+      - key: INTERNAL_API_URL
+        value: https://store-intelligence-api.onrender.com
+      - key: NEXT_PUBLIC_API_BASE_URL
+        value: ""
+    healthCheckPath: /
